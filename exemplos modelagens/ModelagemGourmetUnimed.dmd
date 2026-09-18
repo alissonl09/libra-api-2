@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ModelagemGourmetUnimed" id="61ECCDC0-5F43-169F-FE84-EC8E7F015CF9" version="3.5">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-07 12:30:29 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>61ECCDC0-5F43-169F-FE84-EC8E7F015CF9</designId>
+</OSDM_Design>

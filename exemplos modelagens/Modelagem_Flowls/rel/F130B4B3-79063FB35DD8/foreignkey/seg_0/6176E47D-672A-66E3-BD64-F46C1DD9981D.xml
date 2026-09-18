@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="6176E47D-672A-66E3-BD64-F46C1DD9981D" containerWithKeyObject="BDC3BF9A-43DC-C47B-567E-BC83F48AA7D2" localFKIndex="416413B2-D605-1EF5-7136-83F34C449D40" name="XCXP_FLW_PROG_EMBARQUE_OTM_INT_XCXP_FLW_PROG_EMBARQUE_INT_FK">
+<createdBy>joaofarias</createdBy>
+<createdTime>2026-01-08 18:23:17 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<referredTableLongName>XCXP_FLW_PROG_EMBARQUE_INT</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E9AC8E5A-3EFE-FE86-2E04-EAAEB59CC79E</referredTableID>
+<keyObject>08AB6F27-A969-F172-699F-DD278D0343C9</keyObject>
+<referredKeyID>08AB6F27-A969-F172-699F-DD278D0343C9</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_PROG_EMBARQUE_INT</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

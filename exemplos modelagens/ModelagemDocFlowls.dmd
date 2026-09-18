@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ModelagemDocFlowls" id="C4750474-AD37-BF0E-255C-822821F80633" version="3.5">
+<createdBy>joaofarias</createdBy>
+<createdTime>2026-05-22 13:56:03 UTC</createdTime>
+<ownerDesignName>ModelagemDocFlowls</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>C4750474-AD37-BF0E-255C-822821F80633</designId>
+</OSDM_Design>

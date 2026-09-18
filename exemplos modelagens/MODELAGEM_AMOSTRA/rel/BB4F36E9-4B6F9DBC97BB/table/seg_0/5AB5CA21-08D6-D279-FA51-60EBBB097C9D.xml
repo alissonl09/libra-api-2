@@ -1,0 +1,253 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5AB5CA21-08D6-D279-FA51-60EBBB097C9D" name="XCXP_FLW_AMOSTRA_INT">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-25 18:27:33 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_AMOSTRA_INT" id="36E4A2A8-5683-81BB-8F9C-53E944603863">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-25 18:30:52 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_REF_AMOSTRA" id="C314C892-FF9D-DD7D-C9FC-72899D48A94D">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-25 18:52:17 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_ORDEM_VENDA" id="A99A7207-3659-B090-E84C-CE6F9E7A7CFF">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-25 18:52:50 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_CLASSIFICACAO" id="45F37A81-D86A-73A6-4C20-9227F71FF3EA">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-25 18:54:01 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_ENVIO_CLIENTE" id="4C0797F9-A74B-C2B4-F71B-334C27D0B1A6">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-25 18:54:21 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DS_STATUS" id="C9E99D08-6ED0-D7EF-C29F-D38AB5039117">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-25 18:54:44 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_RECEBIMENTO" id="E05D4C9F-C631-EF5A-B837-2B499F64E21A">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-25 18:55:51 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_FEEDBACK" id="A5C2BDBD-61E2-EAEE-152A-9B1D2C4BBB78">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-25 18:56:14 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DS_OBSERVACAO" id="01F261EC-2C18-0A24-FB97-9BDC654DF2CF">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-25 18:56:41 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 BYTE</dataTypeSize>
+<ownDataTypeParameters>250 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DS_MOTIVO_REJEICAO" id="9F25ABA9-94A2-57CE-5E06-E07D6B82E5D2">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-25 19:06:08 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 BYTE</dataTypeSize>
+<ownDataTypeParameters>250 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DS_APROVACAO_FINAL" id="4B0C9938-94E3-8984-A1EB-3DD56C992466">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-25 19:06:34 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 BYTE</dataTypeSize>
+<ownDataTypeParameters>500 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DS_ULTIMO_ENVIO_CLIENTE" id="F5895F3A-CAEB-2DC3-9375-50ED220DE77B">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-25 19:06:55 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 BYTE</dataTypeSize>
+<ownDataTypeParameters>250 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CD_RASTREIO" id="A48E1A11-80F7-9FE4-0E0C-85FE74FB9450">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 13:23:49 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IN_INTEGRADO" id="2BFDE9AD-0681-752E-1F36-A5C0585A367E">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 13:59:58 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_INTEGRACAO" id="91BC770A-D30C-7FD3-82C0-B213E0CF6A8C">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 14:00:34 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DS_RETORNO_INTEGRACAO" id="99C40C3B-CB8E-F0A5-BDBF-7186780E393D">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 14:02:09 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_USUARIO_CRIAÇÃO" id="9057FB0C-F6EA-991C-417F-3CC73384F0B6">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 14:12:05 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 BYTE</dataTypeSize>
+<ownDataTypeParameters>250 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_CRIACAO" id="3CC89209-4605-87F0-7076-490DB4D225E3">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 14:12:32 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_USUARIO_ALTERACAO" id="F9FB3C2F-0337-4E55-D73C-07F12B6A6799">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 14:13:04 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 BYTE</dataTypeSize>
+<ownDataTypeParameters>250 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_ALTERACAO" id="2C763920-104C-1623-776B-C73C334C77BB">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 14:16:47 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7C33C273-ED6D-F0EF-3E54-73C4B4B22E1E" name="XCXP_FLW_AMOSTRA_INT_PK">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-25 18:32:47 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36E4A2A8-5683-81BB-8F9C-53E944603863"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

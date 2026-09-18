@@ -1,0 +1,59 @@
+HELP.md
+
+### Maven ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### Variáveis de ambiente ###
+.env
+.env.*
+!.env.example
+
+### STS / Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### Visual Studio Code ###
+.vscode/
+
+### Logs ###
+*.log
+/log/
+/logs/
+
+
+### Arquivos temporários ###
+*.tmp
+*.temp
+*.swp
+
+### Sistema operacional ###
+.DS_Store
+Thumbs.db
+
+### Arquivos compactados ###
+*.tar.gz
+*.gz

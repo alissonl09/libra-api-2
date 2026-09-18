@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Define a versão do Spring Boot utilizada pelo projeto -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.1.1</version>
+
+        <relativePath/>
+    </parent>
+
+    <!-- Identificação do projeto -->
+    <groupId>br.com.cooxupe</groupId>
+    <artifactId>libra-api</artifactId>
+    <version>1</version>
+
+    <!-- Nome interno da aplicação -->
+    <name>libra</name>
+
+    <description>
+        API central de integração das operações de balança rodoviária da Cooxupé
+    </description>
+
+    <properties>
+        <!-- Versão do Java -->
+        <java.version>21</java.version>
+
+        <!-- Versão segura do Tomcat embarcado -->
+        <tomcat.version>11.0.25</tomcat.version>
+    </properties>
+
+    <dependencies>
+
+        <!-- Permite criar endpoints REST utilizando Spring MVC -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webmvc</artifactId>
+        </dependency>
+
+        <!-- Segurança e autenticação da API -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- Permite validar os dados recebidos pela API -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!-- Permite utilizar JdbcTemplate e SimpleJdbcCall -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <!-- Pool de conexões UCP e comunicação com o Oracle -->
+        <dependency>
+            <groupId>com.oracle.database.spring</groupId>
+            <artifactId>oracle-spring-boot-starter-ucp</artifactId>
+            <version>26.2.1</version>
+        </dependency>
+
+        <!-- Disponibiliza informações de saúde e monitoramento -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- Bibliotecas utilizadas nos testes -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+
+        <!-- O arquivo final será chamado libra-api.jar -->
+        <finalName>${project.artifactId}</finalName>
+
+        <plugins>
+
+            <!-- Permite gerar e executar o JAR do Spring Boot -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+</project>

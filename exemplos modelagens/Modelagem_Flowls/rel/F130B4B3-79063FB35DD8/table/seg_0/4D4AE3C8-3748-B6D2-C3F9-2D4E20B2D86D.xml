@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4D4AE3C8-3748-B6D2-C3F9-2D4E20B2D86D" name="XCXP_FLW_PRE_EMBARQUE_DUE_INT">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-12-10 13:52:17 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<ordsAlias>table_22</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PRE_EMBARQUE_DUE_INT" id="99802049-11D8-56F1-907E-894CDB7F45BA">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-12-10 13:57:17 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_PRE_EMBARQUE_INT" id="8DD3BF20-B5C2-A77A-4922-152BE695E38C">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-12-10 13:57:54 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5799986C-429C-CD1F-840C-9D2DDA5331AF" referredColumn="4F3DDCD4-B8A2-F9B3-5014-CC954992CA2E"/>
+</associations>
+</Column>
+<Column name="NR_DUE" id="CCD4D8F3-070E-164F-F095-2C92273D5307">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-12-10 13:59:32 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_USUARIO_CRIACAO" id="06D64B2B-CE4C-F59F-F231-3E440EA5A9ED">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-12-10 13:59:57 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_CRIACAO" id="28B6DBEB-E09E-FB85-A58B-9B527EA7B386">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-12-10 14:01:38 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_USUARIO_ALTERACAO" id="11E46452-4122-9D8B-B8D7-8DDF92D152CA">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-12-10 14:02:41 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_ALTERACAO" id="9332C449-9129-AD07-0205-6BE4C4786622">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-12-10 14:03:03 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="77F7C0A0-1BD4-6DCA-80FB-4F54CE570FBD" name="XCXP_FLW_PRE_EMBARQUE_DUE_INT_PK">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-12-10 13:57:21 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="99802049-11D8-56F1-907E-894CDB7F45BA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7509EEDB-8A85-5CD9-A567-72BBE604343D" name="XCXP_FLW_PRE_EMBARQUE_DUE_INT_FK">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-12-10 14:03:40 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8DD3BF20-B5C2-A77A-4922-152BE695E38C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

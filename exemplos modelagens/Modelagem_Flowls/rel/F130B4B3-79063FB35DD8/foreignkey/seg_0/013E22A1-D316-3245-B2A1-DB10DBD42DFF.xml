@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="013E22A1-D316-3245-B2A1-DB10DBD42DFF" containerWithKeyObject="6CD2DD17-6A12-16C6-FA12-4DE7844A8940" localFKIndex="30C14115-F295-8C1A-E10C-9A8B253FCCAF" name="XCXP_FLW_LOGI_NACIONAL_NF_FK">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-10-21 18:12:02 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<referredTableLongName>XCXP_FLW_LOGI_NACIONAL_INT</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E6F4F5AF-40CD-21AC-603A-82B38D7FADAD</referredTableID>
+<keyObject>A3FA62AD-154A-9E13-848A-C409DBAB087E</keyObject>
+<referredKeyID>A3FA62AD-154A-9E13-848A-C409DBAB087E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_LOGI_NACIONAL_INT</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

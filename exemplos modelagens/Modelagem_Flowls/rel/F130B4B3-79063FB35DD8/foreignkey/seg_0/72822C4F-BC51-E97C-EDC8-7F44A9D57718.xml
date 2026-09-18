@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="72822C4F-BC51-E97C-EDC8-7F44A9D57718" containerWithKeyObject="D935C81A-895C-5B00-64D6-57C230B1EFB5" localFKIndex="7B258A72-E629-0714-4768-139997121AA7" name="XCXP_FLW_PEDIDOINT_PEDETINT_FK">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-24 12:01:19 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<referredTableLongName>XXMCC.XCXP_FLW_PEDIDO_INT</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D02B94E3-8435-3983-621A-61842C7674F3</referredTableID>
+<keyObject>F7477555-BD15-B365-36CB-DEFCB6F45E5D</keyObject>
+<referredKeyID>F7477555-BD15-B365-36CB-DEFCB6F45E5D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_PEDIDO_INT</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

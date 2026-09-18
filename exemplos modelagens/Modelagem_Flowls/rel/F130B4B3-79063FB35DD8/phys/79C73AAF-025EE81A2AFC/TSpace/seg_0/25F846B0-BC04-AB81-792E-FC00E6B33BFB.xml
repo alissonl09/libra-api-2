@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSpaceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableSpaceOraclev10g" name="XXMCCX" directorySegmentName="seg_0" id="25F846B0-BC04-AB81-792E-FC00E6B33BFB">
+<sourceConnName>XXMC_R12DEV</sourceConnName>
+<sourceObjName>XXMCCX</sourceObjName>
+<createdBy>marcosvieira</createdBy>
+<createdTime>2025-09-01 17:26:27 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<emUniformSize>0</emUniformSize>
+<extentManagement>LOCAL</extentManagement>
+</TableSpaceOraclev10g>

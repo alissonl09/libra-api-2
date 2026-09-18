@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="XXMCC" directorySegmentName="seg_0" id="F9D82430-C091-93AF-A9B9-2874F79A9963">
+<sourceConnName>XXMC_R12DEV</sourceConnName>
+<sourceObjName>XXMCC</sourceObjName>
+<createdBy>marcosvieira</createdBy>
+<createdTime>2025-09-01 17:26:24 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<schemaObject>0955F8D9-2DFA-7D94-DFBB-F09CBC27142D</schemaObject>
+</UserOraclev10g>
