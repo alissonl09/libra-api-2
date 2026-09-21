@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="E477F5F0-D170-5510-83B1-454931C03D22" mainViewID="6B1C26AE-A6B9-5857-B91C-850C192B3A10">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName><shouldBeOpen>true</shouldBeOpen>
+</LogicalDesign>

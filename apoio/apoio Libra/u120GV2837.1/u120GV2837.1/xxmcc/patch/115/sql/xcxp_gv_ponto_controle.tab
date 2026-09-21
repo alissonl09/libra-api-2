@@ -1,0 +1,66 @@
+WHENEVER SQLERROR CONTINUE;
+CONNECT &1/&2
+SET DEF OFF
+SET VERIFY OFF
+SET SQLBLANKLINES ON
+SPOOL XCXP_GV_PONTO_CONTROLE.tab.log
+
+PROMPT OBJETO:  XCXP_GV_PONTO_CONTROLE.tab
+
+-- $Version: XCXP_GV_PONTO_CONTROLE.tab 120.1 17/07/2025 11:00:00 tiagochagas ship $
+-- +=================================================================+
+-- |                  Copyright (c) 2025 COOXUPE                     |
+-- |                     All rights reserved.                        |
+-- +=================================================================+
+-- |   ARQUIVO                                                       |
+-- |     XCXP_GV_PONTO_CONTROLE                                      |
+-- |                                                                 |
+-- |   DESCRICAO                                                     |
+-- |     PRJ 2837 - Gestão de veículos                               |
+-- |                                                                 |
+-- |   MODULO                                                        |
+-- |     GV                                                          |
+-- |                                                                 |
+-- |   CONTROLE DE VERSAO                                            |
+-- |     Versão: $Revision: 1.0 $                                    |
+-- |     Data  : $Date: 2025/07/17 11:00:00 $                        |
+-- |                                                                 |
+-- |   HISTORICO:                                                    |
+-- |               V1 - Criação objeto - tiagochagas                 |
+-- |                                                                 |
+-- +=================================================================+
+--
+
+CREATE TABLE XXMCC.XCXP_GV_PONTO_CONTROLE (
+    ID_PONTO_CONTROLE      NUMBER(15) NOT NULL,
+    ID_PROCESSO            NUMBER(15) NOT NULL,
+    NM_PERFIL              VARCHAR2(50),
+    TP_PONTO               VARCHAR2(50) NOT NULL,
+    DS_PONTO               VARCHAR2(50),
+    NM_PONTO_CONTROLE      VARCHAR2(50) NOT NULL,
+    NR_ORDEM_PROCESSO      NUMBER(15) NOT NULL,
+    QT_TEMPO_MEDIO         NUMBER(15),
+    IN_STATUS              VARCHAR2(1) NOT NULL,
+    DT_PONTO_CONTROLE      DATE NOT NULL,
+    DT_CRIACAO             DATE NOT NULL,
+    NM_USUARIO_CRIACAO     VARCHAR2(100) NOT NULL,
+    DT_ALTERACAO           DATE NOT NULL,
+    NM_USUARIO_ALTERACAO   VARCHAR2(100) NOT NULL
+);
+
+ALTER TABLE XXMCC.XCXP_GV_PONTO_CONTROLE ADD CONSTRAINT XCXP_GV_PONTO_CONTROLE_PK PRIMARY KEY ( ID_PONTO_CONTROLE );
+
+ALTER TABLE XXMCC.XCXP_GV_PONTO_CONTROLE ADD CONSTRAINT XCXP_GV_PONTO_CONTROLE_UK1 UNIQUE ( NM_PONTO_CONTROLE, NM_PERFIL, NR_ORDEM_PROCESSO, DT_PONTO_CONTROLE );
+
+ALTER TABLE XXMCC.XCXP_GV_PONTO_CONTROLE ADD CONSTRAINT XCXP_GV_PONTOCONTR_PROCESSO_FK FOREIGN KEY ( ID_PROCESSO ) REFERENCES XXMCC.XCXP_GV_PROCESSO ( ID_PROCESSO );
+
+PROMPT ADZ:  AD_ZD_TABLE.UPGRADE
+
+BEGIN
+  AD_ZD_TABLE.UPGRADE('XXMCC', 'XCXP_GV_PONTO_CONTROLE');
+END;
+
+/
+SHOW ERRORS
+SPOOL OFF
+EXIT;

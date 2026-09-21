@@ -1,0 +1,140 @@
+begin aru u120GV2837.1
+
+  compatible release 12.0.0
+  compatible platform GENERIC
+  compatible language PTB 
+  characterset AL32UTF8
+  extension recordpatch 1 US
+  extension patch_type software base
+  compatible feature checkfile
+
+ begin bug xxmcc u120GV2837.1 
+  begin actions
+   #=================================#
+   # Actions for Copying Patch Files #   
+   #=================================#
+
+   #=========SEQ/TAB/========================#    
+    forcecopy xxmcc   patch/115/sql     xcxp_gv_acondicionamento.tab         120.1 ##Projeto GV 2837
+    forcecopy xxmcc   patch/115/sql     xcxp_gv_movimentacao.tab             120.1 ##Projeto GV 2837
+    forcecopy xxmcc   patch/115/sql     xcxp_gv_movimentacao_linha.tab       120.1 ##Projeto GV 2837
+    forcecopy xxmcc   patch/115/sql     xcxp_gv_operacao.tab                 120.1 ##Projeto GV 2837
+    forcecopy xxmcc   patch/115/sql     xcxp_gv_ponto_controle.tab           120.1 ##Projeto GV 2837
+    forcecopy xxmcc   patch/115/sql     xcxp_gv_processo.tab                 120.1 ##Projeto GV 2837
+    forcecopy xxmcc   patch/115/sql     xcxp_gv_roteirizacao.tab             120.1 ##Projeto GV 2837
+    forcecopy xxmcc   patch/115/sql     xcxp_gv_roteirizacao_linha.tab       120.1 ##Projeto GV 2837
+
+    forcecopy xxmcc   patch/115/sql     xcxp_gv_acondicionamento_s.seq       120.1 ##Projeto GV 2837
+    forcecopy xxmcc   patch/115/sql     xcxp_gv_movimentacao_linha_s.seq     120.1 ##Projeto GV 2837
+    forcecopy xxmcc   patch/115/sql     xcxp_gv_movimentacao_s.seq           120.1 ##Projeto GV 2837
+    forcecopy xxmcc   patch/115/sql     xcxp_gv_operacao_s.seq               120.1 ##Projeto GV 2837
+    forcecopy xxmcc   patch/115/sql     xcxp_gv_ponto_controle_s.seq         120.1 ##Projeto GV 2837
+    forcecopy xxmcc   patch/115/sql     xcxp_gv_processo_s.seq               120.1 ##Projeto GV 2837
+    forcecopy xxmcc   patch/115/sql     xcxp_gv_roteirizacao_linha_s.seq     120.1 ##Projeto GV 2837
+    forcecopy xxmcc   patch/115/sql     xcxp_gv_roteirizacao_s.seq           120.1 ##Projeto GV 2837
+
+   #=========Cria Sinonimo===================#
+    forcecopy xbol    patch/115/sql     xcxp_gv_acondicionamento_s.syn       120.1 ##Projeto GV 2837
+    forcecopy xbol    patch/115/sql     xcxp_gv_movimentacao_linha_s.syn     120.1 ##Projeto GV 2837
+    forcecopy xbol    patch/115/sql     xcxp_gv_movimentacao_s.syn           120.1 ##Projeto GV 2837
+    forcecopy xbol    patch/115/sql     xcxp_gv_operacao_s.syn               120.1 ##Projeto GV 2837
+    forcecopy xbol    patch/115/sql     xcxp_gv_ponto_controle_s.syn         120.1 ##Projeto GV 2837
+    forcecopy xbol    patch/115/sql     xcxp_gv_processo_s.syn               120.1 ##Projeto GV 2837
+    forcecopy xbol    patch/115/sql     xcxp_gv_roteirizacao_linha_s.syn     120.1 ##Projeto GV 2837
+    forcecopy xbol    patch/115/sql     xcxp_gv_roteirizacao_s.syn           120.1 ##Projeto GV 2837
+
+   #==================TRG====================#   
+    forcecopy xbol    patch/115/sql     xcxp_gv_acondicionamento_s_trg.trg   120.1 ##Projeto GV 2837
+    forcecopy xbol    patch/115/sql     xcxp_gv_movimentacao_linha_s_trg.trg 120.1 ##Projeto GV 2837
+    forcecopy xbol    patch/115/sql     xcxp_gv_movimentacao_s_trg.trg       120.1 ##Projeto GV 2837
+    forcecopy xbol    patch/115/sql     xcxp_gv_operacao_s_trg.trg           120.1 ##Projeto GV 2837
+    forcecopy xbol    patch/115/sql     xcxp_gv_ponto_controle_s_trg.trg     120.1 ##Projeto GV 2837
+    forcecopy xbol    patch/115/sql     xcxp_gv_processo_s_trg.trg           120.1 ##Projeto GV 2837
+    forcecopy xbol    patch/115/sql     xcxp_gv_roteirizacao_linha_s_trg.trg 120.1 ##Projeto GV 2837
+    forcecopy xbol    patch/115/sql     xcxp_gv_roteirizacao_s_trg.trg       120.1 ##Projeto GV 2837
+
+   #==================LDT====================#
+    forcecopy xbol    admin/import      xcxp_gv_administrador_prf.ldt        120.1 ##Projeto GV 2837
+    forcecopy xbol    admin/import      xcxp_gv_balanca_prf.ldt              120.1 ##Projeto GV 2837
+    forcecopy xbol    admin/import      xcxp_gv_controle_ca_prf.ldt          120.1 ##Projeto GV 2837
+    forcecopy xbol    admin/import      xcxp_gv_controle_cq_prf.ldt          120.1 ##Projeto GV 2837
+    forcecopy xbol    admin/import      xcxp_gv_embarque_prf.ldt             120.1 ##Projeto GV 2837
+    forcecopy xbol    admin/import      xcxp_gv_identificacao_prf.ldt        120.1 ##Projeto GV 2837
+    forcecopy xbol    admin/import      xcxp_gv_monitor_prf.ldt              120.1 ##Projeto GV 2837
+    forcecopy xbol    admin/import      xcxp_gv_redex_prf.ldt                120.1 ##Projeto GV 2837
+    forcecopy xbol    admin/import      xcxp_gv_supervisor_prf.ldt           120.1 ##Projeto GV 2837
+	forcecopy xbol    admin/import      xcxp_gv_rodoviario_prf.ldt           120.1 ##Projeto GV 2837
+	forcecopy xbol    admin/import      xcxp_gv_armazem_prf.ldt              120.1 ##Projeto GV 2837
+	forcecopy xbol    admin/import      xcxp_gv_moega_prf.ldt                120.1 ##Projeto GV 2837
+
+    forcecopy xbol    patch/115/sql     XCXP_FND_RECOMP.sql                  120.1
+
+   #===========================================================================================================================================================#
+   #===========================================================================================================================================================#
+   #===========================================================================================================================================================#
+
+   #=======================================#
+   # Actions for Applying Database Objects #
+   #=======================================#
+
+
+   #=========SEQ/TAB/========================#  
+    sql xxmcc    patch/115/sql   xcxp_gv_acondicionamento.tab         none none none sqlplus &phase=tab    &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xxmcc    patch/115/sql   xcxp_gv_operacao.tab                 none none none sqlplus &phase=tab+1  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xxmcc    patch/115/sql   xcxp_gv_roteirizacao.tab             none none none sqlplus &phase=tab+2  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xxmcc    patch/115/sql   xcxp_gv_processo.tab                 none none none sqlplus &phase=tab+3  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xxmcc    patch/115/sql   xcxp_gv_ponto_controle.tab           none none none sqlplus &phase=tab+4  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xxmcc    patch/115/sql   xcxp_gv_roteirizacao_linha.tab       none none none sqlplus &phase=tab+5  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xxmcc    patch/115/sql   xcxp_gv_movimentacao.tab             none none none sqlplus &phase=tab+6  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xxmcc    patch/115/sql   xcxp_gv_movimentacao_linha.tab       none none none sqlplus &phase=tab+7  &un_apps  &pw_apps  %% ##Projeto GV 2837
+
+    sql xxmcc    patch/115/sql   xcxp_gv_acondicionamento_s.seq       none none none sqlplus &phase=seq    &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xxmcc    patch/115/sql   xcxp_gv_movimentacao_linha_s.seq     none none none sqlplus &phase=seq+1  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xxmcc    patch/115/sql   xcxp_gv_movimentacao_s.seq           none none none sqlplus &phase=seq+2  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xxmcc    patch/115/sql   xcxp_gv_operacao_s.seq               none none none sqlplus &phase=seq+3  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xxmcc    patch/115/sql   xcxp_gv_ponto_controle_s.seq         none none none sqlplus &phase=seq+4  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xxmcc    patch/115/sql   xcxp_gv_processo_s.seq               none none none sqlplus &phase=seq+5  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xxmcc    patch/115/sql   xcxp_gv_roteirizacao_linha_s.seq     none none none sqlplus &phase=seq+6  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xxmcc    patch/115/sql   xcxp_gv_roteirizacao_s.seq           none none none sqlplus &phase=seq+7  &un_apps  &pw_apps  %% ##Projeto GV 2837
+
+   #=========Cria Sinonimo===================#
+    sql xbol    patch/115/sql    xcxp_gv_acondicionamento_s.syn       none none none sqlplus &phase=en     &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xbol    patch/115/sql    xcxp_gv_movimentacao_linha_s.syn     none none none sqlplus &phase=en+1   &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xbol    patch/115/sql    xcxp_gv_movimentacao_s.syn           none none none sqlplus &phase=en+2   &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xbol    patch/115/sql    xcxp_gv_operacao_s.syn               none none none sqlplus &phase=en+3   &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xbol    patch/115/sql    xcxp_gv_ponto_controle_s.syn         none none none sqlplus &phase=en+4   &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xbol    patch/115/sql    xcxp_gv_processo_s.syn               none none none sqlplus &phase=en+5   &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xbol    patch/115/sql    xcxp_gv_roteirizacao_linha_s.syn     none none none sqlplus &phase=en+6   &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xbol    patch/115/sql    xcxp_gv_roteirizacao_s.syn           none none none sqlplus &phase=en+7   &un_apps  &pw_apps  %% ##Projeto GV 2837
+
+   #==================TRG====================#
+    sql xbol    patch/115/sql    xcxp_gv_acondicionamento_s_trg.trg   none none none sqlplus &phase=en+8   &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xbol    patch/115/sql    xcxp_gv_movimentacao_linha_s_trg.trg none none none sqlplus &phase=en+9   &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xbol    patch/115/sql    xcxp_gv_movimentacao_s_trg.trg       none none none sqlplus &phase=en+10  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xbol    patch/115/sql    xcxp_gv_operacao_s_trg.trg           none none none sqlplus &phase=en+11  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xbol    patch/115/sql    xcxp_gv_ponto_controle_s_trg.trg     none none none sqlplus &phase=en+12  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xbol    patch/115/sql    xcxp_gv_processo_s_trg.trg           none none none sqlplus &phase=en+13  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xbol    patch/115/sql    xcxp_gv_roteirizacao_linha_s_trg.trg none none none sqlplus &phase=en+14  &un_apps  &pw_apps  %% ##Projeto GV 2837
+    sql xbol    patch/115/sql    xcxp_gv_roteirizacao_s_trg.trg       none none none sqlplus &phase=en+15  &un_apps  &pw_apps  %% ##Projeto GV 2837
+
+   #==================LDT====================#
+    exec fnd bin FNDLOAD bin &phase=daa    &ui_apps 0 Y UPLOAD @FND:patch/115/import/afscprof.lct @XBOL:admin/import/xcxp_gv_administrador_prf.ldt   UPLOAD_MODE=REPLACE CUSTOM_MODE=FORCE WARNING=YES ##Projeto GV 2837
+    exec fnd bin FNDLOAD bin &phase=daa    &ui_apps 0 Y UPLOAD @FND:patch/115/import/afscprof.lct @XBOL:admin/import/xcxp_gv_balanca_prf.ldt   UPLOAD_MODE=REPLACE CUSTOM_MODE=FORCE WARNING=YES ##Projeto GV 2837
+    exec fnd bin FNDLOAD bin &phase=daa    &ui_apps 0 Y UPLOAD @FND:patch/115/import/afscprof.lct @XBOL:admin/import/xcxp_gv_controle_ca_prf.ldt   UPLOAD_MODE=REPLACE CUSTOM_MODE=FORCE WARNING=YES ##Projeto GV 2837
+    exec fnd bin FNDLOAD bin &phase=daa    &ui_apps 0 Y UPLOAD @FND:patch/115/import/afscprof.lct @XBOL:admin/import/xcxp_gv_controle_cq_prf.ldt   UPLOAD_MODE=REPLACE CUSTOM_MODE=FORCE WARNING=YES ##Projeto GV 2837
+    exec fnd bin FNDLOAD bin &phase=daa    &ui_apps 0 Y UPLOAD @FND:patch/115/import/afscprof.lct @XBOL:admin/import/xcxp_gv_embarque_prf.ldt   UPLOAD_MODE=REPLACE CUSTOM_MODE=FORCE WARNING=YES ##Projeto GV 2837
+    exec fnd bin FNDLOAD bin &phase=daa    &ui_apps 0 Y UPLOAD @FND:patch/115/import/afscprof.lct @XBOL:admin/import/xcxp_gv_identificacao_prf.ldt   UPLOAD_MODE=REPLACE CUSTOM_MODE=FORCE WARNING=YES ##Projeto GV 2837
+    exec fnd bin FNDLOAD bin &phase=daa    &ui_apps 0 Y UPLOAD @FND:patch/115/import/afscprof.lct @XBOL:admin/import/xcxp_gv_monitor_prf.ldt   UPLOAD_MODE=REPLACE CUSTOM_MODE=FORCE WARNING=YES ##Projeto GV 2837
+    exec fnd bin FNDLOAD bin &phase=daa    &ui_apps 0 Y UPLOAD @FND:patch/115/import/afscprof.lct @XBOL:admin/import/xcxp_gv_redex_prf.ldt   UPLOAD_MODE=REPLACE CUSTOM_MODE=FORCE WARNING=YES ##Projeto GV 2837
+    exec fnd bin FNDLOAD bin &phase=daa    &ui_apps 0 Y UPLOAD @FND:patch/115/import/afscprof.lct @XBOL:admin/import/xcxp_gv_supervisor_prf.ldt   UPLOAD_MODE=REPLACE CUSTOM_MODE=FORCE WARNING=YES ##Projeto GV 2837
+	exec fnd bin FNDLOAD bin &phase=daa    &ui_apps 0 Y UPLOAD @FND:patch/115/import/afscprof.lct @XBOL:admin/import/xcxp_gv_rodoviario_prf.ldt   UPLOAD_MODE=REPLACE CUSTOM_MODE=FORCE WARNING=YES ##Projeto GV 2837
+    exec fnd bin FNDLOAD bin &phase=daa    &ui_apps 0 Y UPLOAD @FND:patch/115/import/afscprof.lct @XBOL:admin/import/xcxp_gv_armazem_prf.ldt   UPLOAD_MODE=REPLACE CUSTOM_MODE=FORCE WARNING=YES ##Projeto GV 2837
+    exec fnd bin FNDLOAD bin &phase=daa    &ui_apps 0 Y UPLOAD @FND:patch/115/import/afscprof.lct @XBOL:admin/import/xcxp_gv_moega_prf.ldt   UPLOAD_MODE=REPLACE CUSTOM_MODE=FORCE WARNING=YES ##Projeto GV 2837
+
+   #==================LAST===================#
+    sql xbol    patch/115/sql   XCXP_FND_RECOMP.sql                   none none none sqlplus &phase=last+1       &un_apps  &pw_apps  %%
+
+   end actions
+  end bug xxmcc u120GV2837.1
+end aru u120GV2837.1
+

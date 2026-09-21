@@ -1,0 +1,60 @@
+WHENEVER SQLERROR CONTINUE;
+CONNECT &1/&2
+SET DEF OFF
+SET VERIFY OFF
+SET SQLBLANKLINES ON
+SPOOL XCXP_GV_PROCESSO.tab.log
+
+PROMPT OBJETO:  XCXP_GV_PROCESSO.tab
+
+-- $Version: XCXP_GV_PROCESSO.tab 120.1 17/07/2025 11:00:00 tiagochagas ship $
+-- +=================================================================+
+-- |                  Copyright (c) 2025 COOXUPE                     |
+-- |                     All rights reserved.                        |
+-- +=================================================================+
+-- |   ARQUIVO                                                       |
+-- |     XCXP_GV_PROCESSO                                            |
+-- |                                                                 |
+-- |   DESCRICAO                                                     |
+-- |     PRJ 2837 - Gestão de veículos                               |
+-- |                                                                 |
+-- |   MODULO                                                        |
+-- |     GV                                                          |
+-- |                                                                 |
+-- |   CONTROLE DE VERSAO                                            |
+-- |     Versão: $Revision: 1.0 $                                    |
+-- |     Data  : $Date: 2025/07/17 11:00:00 $                        |
+-- |                                                                 |
+-- |   HISTORICO:                                                    |
+-- |               V1 - Criação objeto - tiagochagas                 |
+-- |                                                                 |
+-- +=================================================================+
+--
+
+CREATE TABLE XXMCC.XCXP_GV_PROCESSO (
+    ID_PROCESSO            NUMBER(15) NOT NULL,
+    NM_PROCESSO            VARCHAR2(50) NOT NULL,
+    IN_STATUS              VARCHAR2(1) NOT NULL,
+    DT_PROCESSO            DATE NOT NULL,
+    QT_PONTO_CONTROLE      NUMBER(15),
+    NR_PRIORIDADE          NUMBER(15),
+    DT_CRIACAO             DATE NOT NULL,
+    NM_USUARIO_CRIACAO     VARCHAR2(100) NOT NULL,
+    DT_ALTERACAO           DATE NOT NULL,
+    NM_USUARIO_ALTERACAO   VARCHAR2(100) NOT NULL
+);
+
+ALTER TABLE XXMCC.XCXP_GV_PROCESSO ADD CONSTRAINT XCXP_GV_PROCESSO_PK PRIMARY KEY ( ID_PROCESSO );
+
+ALTER TABLE XXMCC.XCXP_GV_PROCESSO ADD CONSTRAINT XCXP_GV_PROCESSO_UK1 UNIQUE ( NM_PROCESSO, DT_PROCESSO );
+
+PROMPT ADZ:  AD_ZD_TABLE.UPGRADE
+
+BEGIN
+  AD_ZD_TABLE.UPGRADE('XXMCC', 'XCXP_GV_PROCESSO');
+END;
+
+/
+SHOW ERRORS
+SPOOL OFF
+EXIT;

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<settings>
+  <logical_type_for_domain_presentation value="false" />
+  <automatic_pk_generation value="false" />
+  <automatic_uk_generation value="false" />
+  <automatic_fk_generation value="false" />
+  <preserve_ddl_generation_options value="false" />
+  <use_global_design_level_settings value="false" />
+  <use_preferred_classification_types value="false" />
+  <substitution_patterns></substitution_patterns>
+  <engineering_params>
+    <delete_without_origin value="false" />
+    <engineer_coordinates value="true" />
+    <engineer_generated value="true" />
+    <show_engineering_intree value="false" />
+    <apply_naming_std value="false" />
+    <use_pref_abbreviation value="false" />
+    <date_format value="YYYY/MM/DD HH24:MI:SS" />
+    <timestamp_format value="YYYY/MM/DD HH24:MI:SS.FF" />
+    <timestamp_tz_format value="YYYY/MM/DD HH24:MI:SS.FFTZH:TZM" />
+  </engineering_params>
+</settings>

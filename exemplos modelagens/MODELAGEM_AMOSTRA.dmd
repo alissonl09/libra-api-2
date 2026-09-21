@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="MODELAGEM_AMOSTRA" id="60CACD92-445D-913E-F88D-D00335DDEE86" version="3.5">
-<createdBy>joaofarias</createdBy>
-<createdTime>2025-09-25 18:27:25 UTC</createdTime>
-<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>60CACD92-445D-913E-F88D-D00335DDEE86</designId>
-</OSDM_Design>

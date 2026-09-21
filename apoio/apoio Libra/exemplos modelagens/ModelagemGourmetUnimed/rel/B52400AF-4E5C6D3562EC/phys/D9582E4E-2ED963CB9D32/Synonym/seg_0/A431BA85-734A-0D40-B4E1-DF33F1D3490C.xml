@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SynonymOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="XCXP_GOURMET_UNIMED_DETALHES" directorySegmentName="seg_0" id="A431BA85-734A-0D40-B4E1-DF33F1D3490C">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-07 17:06:50 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<object>XCXP_GOURMET_UNIMED_DETALHES</object>
+<objectUser>980F9E3B-1A9A-38BF-85CA-106C80A8FFB3</objectUser>
+<user>28550CA3-4962-E570-D1C6-5FD1687EF79E</user>
+<referredObjectID>BDA7A4F6-9842-211F-4767-409E055F9A21</referredObjectID>
+</SynonymOraclev10g>

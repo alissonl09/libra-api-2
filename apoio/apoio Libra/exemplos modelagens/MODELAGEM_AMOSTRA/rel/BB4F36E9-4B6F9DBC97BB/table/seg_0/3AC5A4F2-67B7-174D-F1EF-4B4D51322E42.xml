@@ -1,0 +1,207 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3AC5A4F2-67B7-174D-F1EF-4B4D51322E42" name="XCXP_FLW_AMOSTRA_BLEND_iNT">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 14:23:59 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_BLEND_AMOSTRA_INT" id="2BF776E0-2107-A67D-4B61-28BC2782DD09">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 14:24:46 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_AMOSTRA_INT" id="8B63AC4F-CCD6-C257-1E15-458D5CCF225C">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 14:25:28 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C2A8EFA8-6414-CE61-1975-F58BE26D7BD3" referredColumn="36E4A2A8-5683-81BB-8F9C-53E944603863"/>
+</associations>
+</Column>
+<Column name="NR_VERSAO" id="8A98773F-6BB1-54CD-DC10-6517F0022F20">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 16:18:58 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DS_ITEM_VENDIDO_AMOSTRA" id="12579CD2-B7D9-1EB0-BC96-19416806BB41">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 16:19:38 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 BYTE</dataTypeSize>
+<ownDataTypeParameters>250 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CD_RA_VENDIDO" id="7F99C453-B11B-3654-DDB2-44E68A4DE306">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 16:26:55 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CD_SAFRA" id="0A241E1C-1BE1-B30E-C7E9-00312A648C5B">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 16:54:02 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_PERCENTUAL" id="12E7B1FC-7BD4-24EA-B936-48260CA6EAC9">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 17:20:47 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,3,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DS_ITEM_APROVADO" id="AAAE2D15-1032-621C-E6FF-309F9D3F27A7">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 17:23:31 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 BYTE</dataTypeSize>
+<ownDataTypeParameters>250 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CD_RA_APROVADO" id="455B23D5-C5E1-99CE-4ADC-90A8CC97C6ED">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 17:44:15 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CD_SAFRA_APROVADO" id="491889F5-A9DA-5C26-E51E-57B8B47DCAC4">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 17:45:53 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 BYTE</dataTypeSize>
+<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_PERCENTUAL_APROVADO" id="D1BE0D51-0C67-AF53-4BDA-A70BCF4D1940">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 17:47:16 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_USUARIO_CRIACAO" id="82A7BBA4-3F30-D8CE-DA3D-5F44692C08D0">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 17:48:51 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_CRIACAO" id="C1B1FF4B-213B-4C58-271E-CD405FF48239">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 17:51:33 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_USUARIO_ALTERACAO" id="2C91D651-36AA-75F6-88BF-176F1280B672">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 17:51:55 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_ALTERACAO" id="8B1DC097-23F7-D666-3FAE-AAF5D800D5DA">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 17:52:19 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EE15EC8F-7703-D432-CB58-EDA834C51CD7" name="XCXP_FLW_AMOSTRA_BLEND_iNT_PK">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 14:24:46 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2BF776E0-2107-A67D-4B61-28BC2782DD09"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BC8413FF-5A19-C768-FEAA-389B76218F21" name="XCXP_FLW_AMOSTRA_BLEND_iNT_XCXP_FLW_AMOSTRA_INT_FK">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-26 17:52:40 UTC</createdTime>
+<ownerDesignName>MODELAGEM_AMOSTRA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8B63AC4F-CCD6-C257-1E15-458D5CCF225C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="XCXP_BAL_BALANCA_SMART1" id="BE7F0DDB-78BC-5324-BA74-16870DB907BE" version="3.5">
+<createdBy>ChatGPT/OpenAI</createdBy>
+<createdTime>2026-09-20 23:16:00 UTC</createdTime>
+<ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>BE7F0DDB-78BC-5324-BA74-16870DB907BE</designId>
+</OSDM_Design>

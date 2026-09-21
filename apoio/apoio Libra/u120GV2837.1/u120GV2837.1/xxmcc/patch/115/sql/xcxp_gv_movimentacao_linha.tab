@@ -1,0 +1,68 @@
+WHENEVER SQLERROR CONTINUE;
+CONNECT &1/&2
+SET DEF OFF
+SET VERIFY OFF
+SET SQLBLANKLINES ON
+SPOOL XCXP_GV_MOVIMENTACAO_LINHA.tab.log
+
+PROMPT OBJETO:  XCXP_GV_MOVIMENTACAO_LINHA.tab
+
+-- $Version: XCXP_GV_MOVIMENTACAO_LINHA.tab 120.1 17/07/2025 11:00:00 tiagochagas ship $
+-- +=================================================================+
+-- |                  Copyright (c) 2025 COOXUPE                     |
+-- |                     All rights reserved.                        |
+-- +=================================================================+
+-- |   ARQUIVO                                                       |
+-- |     XCXP_GV_MOVIMENTACAO_LINHA                                  |
+-- |                                                                 |
+-- |   DESCRICAO                                                     |
+-- |     PRJ 2837 - Gestão de veículos                               |
+-- |                                                                 |
+-- |   MODULO                                                        |
+-- |     GV                                                          |
+-- |                                                                 |
+-- |   CONTROLE DE VERSAO                                            |
+-- |     Versão: $Revision: 1.0 $                                    |
+-- |     Data  : $Date: 2025/07/17 11:00:00 $                        |
+-- |                                                                 |
+-- |   HISTORICO:                                                    |
+-- |               V1 - Criação objeto - tiagochagas                 |
+-- |                                                                 |
+-- +=================================================================+
+--
+
+CREATE TABLE XXMCC.XCXP_GV_MOVIMENTACAO_LINHA (
+    ID_MOVIMENTACAO_LINHA   NUMBER(15) NOT NULL,
+    ID_MOVIMENTACAO         NUMBER(15) NOT NULL,
+    ID_PONTO_CONTROLE       NUMBER(15) NOT NULL,
+    IN_STATUS               VARCHAR2(20) NOT NULL,
+	DS_ATRASO               VARCHAR2(500),
+    DT_ENTRADA              DATE,
+    DT_SAIDA                DATE,
+    IN_STATUS_TEMPO         VARCHAR2(15) NOT NULL,
+	IN_ENTRADA              VARCHAR2(1),
+    DT_MOVIMENTACAO_LINHA   DATE NOT NULL,
+    DT_CRIACAO              DATE NOT NULL,
+    NM_USUARIO_CRIACAO      VARCHAR2(100),
+    DT_ALTERACAO            DATE NOT NULL,
+    NM_USUARIO_ALTERACAO    VARCHAR2(100) NOT NULL
+);
+
+ALTER TABLE XXMCC.XCXP_GV_MOVIMENTACAO_LINHA ADD CONSTRAINT XCXP_GV_MOVIMENTACAO_LINHA_PK PRIMARY KEY ( ID_MOVIMENTACAO_LINHA );
+
+ALTER TABLE XXMCC.XCXP_GV_MOVIMENTACAO_LINHA ADD CONSTRAINT XCXP_GV_MOVIMENTACAO_LINHA_UK1 UNIQUE ( ID_MOVIMENTACAO, ID_PONTO_CONTROLE, DT_MOVIMENTACAO_LINHA );
+
+ALTER TABLE XXMCC.XCXP_GV_MOVIMENTACAO_LINHA ADD CONSTRAINT XCXP_GV_MOVIMENTA_MOVILINHA_FK FOREIGN KEY ( ID_MOVIMENTACAO ) REFERENCES XXMCC.XCXP_GV_MOVIMENTACAO ( ID_MOVIMENTACAO );
+
+ALTER TABLE XXMCC.XCXP_GV_MOVIMENTACAO_LINHA ADD CONSTRAINT XCXP_GV_PONTOCONT_MOVILINHA_FK FOREIGN KEY ( ID_PONTO_CONTROLE ) REFERENCES XXMCC.XCXP_GV_PONTO_CONTROLE ( ID_PONTO_CONTROLE );
+
+PROMPT ADZ:  AD_ZD_TABLE.UPGRADE
+
+BEGIN
+  AD_ZD_TABLE.UPGRADE('XXMCC', 'XCXP_GV_MOVIMENTACAO_LINHA');
+END;
+
+/
+SHOW ERRORS
+SPOOL OFF
+EXIT;

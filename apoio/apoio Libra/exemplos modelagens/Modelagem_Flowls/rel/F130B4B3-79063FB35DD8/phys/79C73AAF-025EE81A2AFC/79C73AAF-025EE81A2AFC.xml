@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<StorageDesignOraclev12cR2 class="oracle.dbtools.crest.model.design.storage.oracle.v12cr2.StorageDesignOraclev12cR2" name="Oracle Database 12cR2" id="6ADEDE9E-D94D-E460-C01F-500C60BE810A" siteID="79C73AAF-E1A7-E669-7DF0-025EE81A2AFC" siteName="Oracle Database 12cR2" siteType="14">
+<createdBy>marcosvieira</createdBy>
+<createdTime>2025-09-01 17:26:13 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+</StorageDesignOraclev12cR2>

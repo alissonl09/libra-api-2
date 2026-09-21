@@ -1,0 +1,24 @@
+-- +=================================================================+
+-- |                  Copyright (c) 2025 COOXUPE                     |
+-- |                     All rights reserved.                        |
+-- +=================================================================+
+-- |   ARQUIVO                                                       |
+-- |     GRANT_XXSGV                                                 |
+-- |                                                                 |
+-- |   DESCRICAO                                                     |
+-- |     PRJ 2837 - Gestão de veículos                               |
+-- |                                                                 |
+-- |   MODULO                                                        |
+-- |     GV                                                          |
+-- |                                                                 |
+-- |   CONTROLE DE VERSAO                                            |
+-- |     Versão: $Revision: 1.0 $                                    |
+-- |     Data  : $Date: 2025/07/17 11:00:00 $                        |
+-- |                                                                 |
+-- |   HISTORICO:                                                    |
+-- |               V1 - Criação objeto - tiagochagas                 |
+-- |                                                                 |
+-- +=================================================================+
+--
+
+GRANT SELECT ON APPS.FND_PROFILE_OPTIONS TO XXSGV;

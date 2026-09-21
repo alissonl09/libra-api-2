@@ -1,0 +1,18 @@
+# ==============================================================================
+# EXEMPLO DE DRIVER - PROJETO BALANCA / SMART 1
+# Owner: XXBALANCA
+# IMPORTANTE: alinhar cabecalho e sintaxe exata de forcecopy/sql com o patch
+# corporativo de referencia antes de promover para um patch oficial.
+# ==============================================================================
+
+# Sequences
+forcecopy xxbalanca patch/115/sql XCXP_BAL_ACESSO_INT_S.seq 120.0
+forcecopy xxbalanca patch/115/sql XCXP_BAL_ACESSO_LINHA_S.seq 120.0
+sql xxbalanca patch/115/sql XCXP_BAL_ACESSO_INT_S.seq none none none &phase=seq
+sql xxbalanca patch/115/sql XCXP_BAL_ACESSO_LINHA_S.seq none none none &phase=seq
+
+# Tables / constraints / indexes / comments
+forcecopy xxbalanca patch/115/sql XCXP_BAL_ACESSO_INT.tab 120.0
+forcecopy xxbalanca patch/115/sql XCXP_BAL_ACESSO_LINHA.tab 120.0
+sql xxbalanca patch/115/sql XCXP_BAL_ACESSO_INT.tab none none none &phase=tab
+sql xxbalanca patch/115/sql XCXP_BAL_ACESSO_LINHA.tab none none none &phase=tab

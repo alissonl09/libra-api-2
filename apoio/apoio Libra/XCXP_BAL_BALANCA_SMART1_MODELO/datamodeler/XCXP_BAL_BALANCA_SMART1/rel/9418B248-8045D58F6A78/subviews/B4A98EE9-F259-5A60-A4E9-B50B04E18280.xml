@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.relational.DPVRelational" name="Modelo Relacional - XXBALANCA" id="B4A98EE9-F259-5A60-A4E9-B50B04E18280">
+<createdBy>ChatGPT/OpenAI</createdBy><modifiedBy>ChatGPT/OpenAI</modifiedBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><autoRoute>false</autoRoute><boxInbox>true</boxInbox><showLegend>false</showLegend><showLabels>true</showLabels><showRelAttributes>false</showRelAttributes><gridEnabled>true</gridEnabled><showGrid>false</showGrid><diagramColor>-1</diagramColor><display>true</display><notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="00CD95F6-EB51-557D-85BB-2D904F9807F3" otype="Table" vid="518209AB-8956-5A72-A0F1-C8CEBCE52C31"><hideElementsInCurrentOnly>false</hideElementsInCurrentOnly><bounds x="40" y="50" width="380" height="590"/></OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="14EBA741-7C22-5324-A80B-209F46C3BA8C" otype="Table" vid="9BC2A546-1210-5917-988E-EE4BBC344CD4"><hideElementsInCurrentOnly>false</hideElementsInCurrentOnly><bounds x="600" y="180" width="390" height="280"/></OView>
+</objectViews>
+<connectors><Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="60AE717F-C399-52A2-8752-43F78D1D8E7B" otype="FKIndexAssociation" vid_source="518209AB-8956-5A72-A0F1-C8CEBCE52C31" vid_target="9BC2A546-1210-5917-988E-EE4BBC344CD4"><hideElementsInCurrentOnly>false</hideElementsInCurrentOnly><backgroundColor>-16777216</backgroundColor><lineWidth>1</lineWidth><points><point x="420" y="315"/><point x="600" y="315"/></points></Connector></connectors>
+</Diagram>

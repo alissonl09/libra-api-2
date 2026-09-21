@@ -1,0 +1,57 @@
+Slide EPA - Entrada de produto agrícola
+1. Apresentação do que se trata o slide (ENTRADA DE PRODUTO AGRÍCOLA – ACONDICIONAMENTO BAG’s)
+2. O cooperado informa a cooxupé que irá depositar uma quantidade de café. A partir daí o colaborador irá emitir uma RD (Remessa para Depósito)
+	que é um regime especial da cooxupé para que o cooperado possa transitar com o café sem ser necessário emitir uma nf.
+3. Geração do epa e abertura de peso para descarga: caminhão do cooperado chega carregado em bags
+4.  Coleta da RD: Cooperado vai até a portaria e entrega a RD para o colaborador da portaria do armazém. neste momento, o colaborador confirma com o motorista
+	qual acondicionamento está a sua carga de café, se é totalmente em bag (e a quantidade de bags), se está a granel, ou se trata de duplo acondicioanmento
+	ou seja, parte em bags e parte em granel. Ele anexa essa informação da RD para ser emitido o EPA neste momento ele aguarda no patio para ser chamado.
+5. EPA - A partir da RD recebida, é emitida  no sismtema a documentação EPA (Entrada de Produto agrícola), que é o documento que indica que o motorista chegou com a carga
+	e informado qual acondicionamento está, para que seja realizado o processo de abertura de peso e de pesagem. aqui são gerados os dados principais
+	que são enviados para a balança.
+6. Com o EPA emitido e aprovado, ele é impresso e entregue para o colaborador que opera a balança. 
+7.assim ele chama o motorista para realizar a abertura do peso no microfone. O operador da balança está em seu computador com o programa da balança
+8. Caminhão segue para a balança para a abertura de peso.
+9. Cabimnhão sobre a balança e peso sendo puxado do indicador de peso para a sistema da balança.
+10. Balanceiro digita a placa do caminhão no sistema ou bipa atraves de um leitor de código de barras.
+11. após digitar a placa ou ler pelo leitor de código de barras, o sistema busca as informações do epa que foi emitido e traz para a balança.
+	as informações do epa são:
+	
+	Tipo do documento: identificação de que a operação corresponde a um EPA. (essa campo não vai para a tela. é implicito, pois ele determina no momento da seleção do item, qual item é correspondente a EPA)
+	Nota Fiscal Nº: identificação do EPA e da nota fiscal relacionada (que neste caso é o número da RD). Quando houver mais de um EPA para o mesmo veículo, os documentos poderão ser apresentados em conjunto.
+	Emissor: nome do produtor, cooperado ou fornecedor relacionado ao recebimento.
+	Motorista: nome do motorista do veículo.
+	Transportador: identificação do transportador relacionado à operação.
+	Peso N.F.: quantidade total prevista nos documentos relacionados ao veículo.
+	Destino: Nome do campo incorreto na implantação do sistema. Aqui o correto seria  ‘Acondicionamento’, onde se trata da forma em que o produto está sendo recebido, podendo ser, por exemplo:
+		BAG;
+		GRANEL;
+		BAG / GRANEL.
+	Local de recebimento: identificação da unidade/local onde está ocorrendo a operação de pesagem. (esse campo também é implicito, pois dependendo da unidade (filial que foi emitido o epa ele deixa a placa relacionada ao epa selecionavel na balança da unidade para trazer os dados automaticamente, ou seja as balanças da outrs unidades não sabem que essa placa terá uma pesagem, somente a da unidade correta.))
+12. Campos digitados manualmente, que hoje não trazem automaticamente.
+
+	Item: A identificação do item varia conforme a operação e o acondicionamento do café, não sendo utilizado um único código genérico. Por exemplo, para recebimento de produtor em bag é utilizado o item 46 – CAFE RECEBIMENTO PRODUTOR ERC, enquanto há códigos específicos para EPA a granel, XFER e outros processos. Essa diferenciação é necessária porque cada item está vinculado às regras de tolerância de peso da respectiva operação, considerando os percentuais máximos de renda e quebra.
+	Depósito: identificação da unidade/local onde está ocorrendo a operação de pesagem. 
+	Informações Complementares: No caso de bags, aqui é informado a quantidade de bags.
+13 . Campos totalmente preenchidos para realizar a pesagem
+14. Pesagem 1 (Abertura de peso) registrada
+15. Pesagem salva no sistema
+16. Veículo Entra para descarga dos bags
+17. Veiculo chega ao local que tem a balnça de descarga de bags
+18 a 25  - O Veículo descarrega bag a bag, e pesa um de cada vez, 4 deles com 1200 kg exatos, um com 1198 e outro com 1194.
+26. Fechamento do peso, veiculo volta descarregado para a balança para fechar o peso;
+27. Balanceiro consulta a placa que está com a pesagem em aberto na aba veículos. clincado na placa ele traz os dados exatamente no momento que foi salvo na abertura do epso.
+28. 
+		A. No ato do fechamento do peso, o campo Peso N.F é atualizado com o peso dos bags que foram recebidos na balança de bags no armazém. essa informação é buscada no sistema wms que registra o peso total dos bags que foram descarregados.
+			No exemplo do slide, o campo peso nf no ato da abertura do peso estava como 7200 kg, que foi puxado automatico do que estava no epa
+			.Depois de descarregado, quando o caminhão volta para o fechamento do peso e o balanceiro seleciona a placa, que está com peso em aberto, o ato de ele selecionar a placa, já atualiza o campo Peso NF com a quantidade total que foi recebida dos bags na balança d ebag
+			.Essa inforamção do peso que foi descarregado na balança dos bags, fica no sistema wms que gerencia as operações de carga/descarga realizada nos armazéns.
+			.No exemplo, o campo Peso N.F é preenchido com 7192, onde e a soma do peso de todos os bags (4 x 1200)+1198+1194 que dá 7192
+			.Ele exibe também a diferença do peso da nf como -2kg. pode parecer confuso pos a diferença seria de -8 se comparado pelo peso de 7200, porém tem o peso de embalagem dos 6 bags, que é parametrizável dentro do ERP, como 1kg, dando no total 6 kg.
+				esse peso de 6kg é descontado do peso total da nf para não entrar na conta da diferença de kg, onde fica 7200kg - 6kg e ficamos com 7194 onde 1792 - 1794 (peso recebudo no armazém - peso da nf descontando os bags) da -2kg de diferença
+			.Balanceiro registra a pesagem (F12)
+			. Para caso de bags, as inforamções de Peso Líquido da balança e peso seco não são consideradas, pois a balança rodoviária pesa de 10 em 10 e o peso seco faz o calculo do desconto dos bags através do peso lkíquido da balança rodoviária(7190 6 kg) e por isso utilizamos o peso da balança de bag e não da rodoviaria, para dar o desconto sobre o epso exato recebido.
+29 e 30. Balanceiro salva a pesagem (F7) e imprime automaticamente os tickets no ato de salvar a pesagem.
+31. São impressas duas vias de ticket da pesagem, uma com o peso que foi recebida no armazém e outra com os pesos registrados na balança rodoviária. Somente para descargas em bags são emitidos dois tickets.
+			
+28. 

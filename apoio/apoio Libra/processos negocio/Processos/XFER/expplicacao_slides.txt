@@ -1,0 +1,97 @@
+1. Processo de pesagens de tranferencias entre unidades (Xfer) 
+2. Surge uma demanda de transferencia para uma de nossas unidades (seja por falta de espaço nos armazéns ou outro motivo logistico)
+3. Depsartamento de Planejamento e Ccontrole de produção (PCP) registra no ERP um planejamento de tranferencia, no exemplo do slide, uma transferencia de Monte Carmelo para Guaxupé. Depois de planejado a demanda fica aberta no sistema para a portaria da unidade atender
+4. Depois do planejajamento, a portaria da unidade  de origem é informada da transferencia e realiza a seleção do motorista que irá atender a demanda através do OTM (Oracle Transportation Management).
+5. Motorista vai a unidade para coletar o café da transferência
+6. Motorista chegou ele aguada a portaria da unidade realizar o Atendimento do Planejamento onde ele coloca o número do planejamento que quele atendimento se trata, qual é o número da viagem daquele atendimento os lotes e a quantidade dos lotes dessa transferência e é emitida uma Ordem de carregamento (OC)
+7. Assim feito o atendimento do planejamento, a oc gerada é entregue na balança para o balanceiro chamar o motorista realizar a abertura de peso.
+8. Caminhão segue para a balança para a abertura de peso.
+9. Camimnhão sobre a balança e peso sendo puxado do indicador de peso para a sistema da balança.
+10. Balanceiro digita a placa do caminhão no sistema ou bipa atraves de um leitor de código de barras o código da ordem de carregamento.
+11. após digitar a placa ou ler pelo leitor de código de barras, o sistema busca as informações do epa que foi emitido e traz para a balança.
+	as informações do epa são:
+	
+**Tipo do documento:** identificação de que a operação corresponde a uma Transferência entre unidades — XFER. Esse campo não precisa ser apresentado ao usuário, pois serve para identificar internamente o tipo de processo relacionado à pesagem.
+
+**Nota Fiscal Nº:** identificação da transferência relacionada ao veículo e da respectiva Ordem de Carregamento/viagem. Essa informação permite ao usuário reconhecer qual transferência está sendo atendida naquele momento.
+
+**Emissor:** identificação da unidade de origem da transferência, ou seja, a unidade responsável pelo envio do produto.
+
+**Motorista:** Nome do motorista do veículo
+
+**Transportador:** identificação do transportador relacionado à operação
+
+**Peso N.F.:** quantidade total prevista para a transferência relacionada ao veículo, considerando os lotes vinculados à operação e, quando aplicável, o peso correspondente ao acondicionamento utilizado no transporte.
+
+
+
+
+
+**Local de pesagem:** identificação implícita da unidade onde a pesagem deve ocorrer. Na saída da transferência, somente as balanças relacionadas à unidade de origem devem disponibilizar aquela placa para atendimento.
+
+12. Campos digitados manualmente, que hoje não trazem automaticamente.
+
+	Item: A identificação do item varia conforme a operação e o acondicionamento do café, não sendo utilizado um único código genérico. Por exemplo, para transferência de café entre unidades é utilizado o item 41 – CAFÉ TRANSF. NUCLEO / ARM. 3, tanto para saída quanto para entrada de transferências. Essa diferenciação é necessária porque cada item está vinculado às regras de tolerância de peso da respectiva operação, considerando os percentuais máximos de renda e quebra.
+	Depósito: identificação da unidade de destino da transferência, ou seja, o local para onde o produto está sendo enviado.
+	**Destino:** Nome do campo incorreto na implantação do sistema. Aqui o correto seria  ‘Acondicionamento’, onde se trata da forma em que o produto está sendo transportado, podendo ser, por exemplo:
+		BAG;
+		GRANEL;
+		BAG / GRANEL.
+	Informações Complementares: QUANTIDADE: No caso de bags, aqui é informado a quantidade de bags;PESO TICKET TERCEIRO: Não utilizado na saída de xfer.
+13 . Campos totalmente preenchidos para realizar a pesagem
+14. Pesagem 1 (Abertura de peso) registrada
+15. Pesagem salva no sistema
+16. Veículo Entra para caregamento
+17. Veiculo chega ao local que será carregado no armazém e inicia o carregamento
+18. Fechamento do peso, veiculo volta carregado para a balança para fechar o peso;
+19. Balanceiro consulta a placa que está com a pesagem em aberto na aba veículos. clincado na placa ele traz os dados exatamente no momento que foi salvo na abertura do peso.
+20. é realizada a gravação da pesagem 2 que é o fechamento do peso. No fechamento de uma XFER a GRANEL, o peso líquido da balança rodoviária é obtido pela diferença entre o peso final do veículo carregado e a tara registrada na abertura. Neste exemplo: 36.000 kg – 10.000 kg = 26.000 kg. Como a carga é a granel, não há peso de embalagem a considerar.
+	Se a transferência fosse em BAG, o peso dos BAGs faria parte do peso apurado pela balança. Por isso, o sistema considera também a tara parametrizada das embalagens no peso previsto da operação, acrescentando esse valor ao peso do produto para que a comparação com o peso líquido da balança seja feita de forma equivalente.
+21. Neste caso, indicou que o peso líquido da carga está 100 kg abaixo da tolerancia de operações de xfer, no qual a tolerancia hoje é 30 kg de quebra e 30 kg de renda.
+	Neste caso, o supervisor de armazém responsável pela carga vai até a balança para verificar o ocorrido, e dependendo do caso, o veículo volta para carregar o restante no armazém, e a pesagem continua em aberto, ou o supervisor com seu usuário e senha atribuido ao nível de supervisor (este nível permita liberar essas inconsistencias de peso)
+	libera para salvar e fechar o peso mediante justificativa de liberação que depois será constatada em relatórios utilizados pelo comitê de pesagem.
+22. no exemplo, o veículo voltou ao armazém e ajustou a carga
+23. veículo no armaém novamente, carregando os 100 kg que faltaram
+24. Veículo retorna a balança depois da carga ajustada
+25. Agora com a carga correta, é registrado o peso, agora sem divergências entre peso líquido e peso n.f
+26. Balanceiro salva a pesagem.
+27. Ticket de nuemração 318872 salvo e impresso e entrega ao motorista. O motorista aguarda a emissão da NF pela portaria.
+28. Colaborador da portaria emite a Nota fiscal da carga através da tela Ordem de Carregamento no ERP, confirmando a transferencia em trânsito para o destino.
+29. NF entregue para o motorista juntamente com a ordem de carregamento assinada por ele e pelo supervisor que acompanhou o carregamento e o ticket de pesagem gerado, ele segue viagem para a unidade de destino.
+30. O caminhão chega ao destino para descarga
+31. o motorista entrega as documentos na portaria (NF ,ordem de carregamento e ticket) e a amostra do café, aso houver. e aguarda ser chamado.
+32. a documentação e entregue para o colaborador da portaria relizar a recebimento da transferêncai no sistema, na telarecebimento de transferências.
+33. Recebida, a OC e o ticket emitido na origem vai para o balanceiro para ele já chamar o motorista para abrir o peso para descarga.
+34. Caminãosegue para a balança para abertura de peso  da descarga.
+Obs: do slide 35 ao 47 mostra esse processo faltando 100 kg
+35. Ao inves de já inserir a placa no sistema para trazer os dados, o balanceiro acessa um recurso no sistema da balança chamado buscar pesagem para improtar os dados da pesagem que foi realizada na origem.
+36. Mostra a tela de Buscar pesagem
+37. o balanceiro confere o ticket que veio com o motorista;
+38. busca na tela inserindo o código que representa a unidade de origem (no exemplo 17 é Monte Carmelo) unidade da origem e o número do ticket
+39. encontra o ticket correspondente na tela e clica em selecionar para importar os dados.
+40. Além das informações de placa, motorista e outras informações que foram preenchidas no ato da pesagem na origem, vem também as informaç~]oesda unidade de Origem e Peso origem para conferencia.
+41. Registra a pesagem 1, abertura de peso da descarga;
+42. Salva a pesagem e a placa fica registrada como peso em aberto.
+43. veículo segue para o setor de operações para realizar a descarga.
+44. Descarga é realizada peloas plataformas de tombadores hidráulicos (no caso do exemplo, é a granel, então a descarga é dessa forma)
+45. APós descarga, o veículo retorna a balança para fechamento do peso
+46. Balanceiro consulta a placa que está com a pesagem em aberto na aba veículos. clincado na placa ele traz os dados exatamente no momento que foi salvo na abertura do epso.
+47. Quando ele clica em Pesagem, é feita a conferencia do peso liquido calculado na balança rodoviária com o peso da origem e o peso da NF. obedecendo a mesma regra de tolerancia da xfer (30kg rendae quebra)
+	Neste exemplo eu forcei o erro, como se tivesse acontecido perda da carga no caminho da viagem de 100 kg. No ato do fechamnto da pesagem a balaçaidentifica a inconsistencia e aparede a mensagem:
+	"Diferença entre liquido e ORIGEM maior que o permitido. Diferença: -IOO.OOKgou -0.38%"
+	Nesse caso também pede senha do supervisor que inspecionou a descarga, porém deve ser conferido também com o balanceiro. pois haduas situações
+	No exemplo doslide, o veículo saiu da unidade com 36100 kg (ticket impresso prova isso) e chegou com 3600 kg no destino (abertura de peso salva mostra isso), neste caso devera ver se houve algum problema no momento do registro da abertura de peso consultando cameros no momento da abertura e se estava tudo certo no momento da abertura, consta-se que houve perda de carga.
+	Porém, se o peso fechado de 36100 na unidade de origem, batesse com o peso aberto na unidade de destino, então quer dizer que no ato do fehcamneto de peso na origem até a abertura do peso no destino, não houve perda de carga, então a inconsistencia aconteceu já dentro do processo de descarga e o supervisor deve apurar.
+	Neste caso utilizado, foi apurado que houve perda de carga na viagem o supervisor entra com o usuário e senha e coloca a justificativa para prosseguir com o fechamento do peso.
+Obs: do slide 35 ao 47 mostra esse processo faltando 100 kg
+do slide 48 para frente é uma operação de descarga sem inconsistencias de peso.
+48. Aqui é mostrado se não houvesse nenhum problema de divergência na carga ou seja ele entrou com 36100 kg corretamente. neste slide o balanceiro já fez a importação do ticket e está abrindo o peso.
+49. Salva a abertura do peso
+50. caminhão entra para a descarga
+51. Descarga é realizada pelas plataformas de tombadores hidráulicos (no caso do exemplo, é a granel, então a descarga é dessa forma)
+52. Veiculo retorna descarregado para o fechamento do peso;
+53. Balanceiro confirma a pesagem.
+54. confirma o registro da pesagem e ve se está sem inconsistenscias entre o peso liquido registrado na balança, com o peso de origem ou o peso da N.F.
+55. Realiza o salvamento da pesagem.
+56 Pesagem salva, é impresso o ticket da descarga da transferencia.
+57. Veículo liberado para ir embora.

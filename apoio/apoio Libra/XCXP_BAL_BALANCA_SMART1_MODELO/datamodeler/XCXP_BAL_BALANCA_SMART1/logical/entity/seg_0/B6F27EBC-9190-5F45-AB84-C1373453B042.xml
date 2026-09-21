@@ -1,0 +1,218 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B6F27EBC-9190-5F45-AB84-C1373453B042" name="ACESSO">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Cabeçalho de uma visita/pesagem a integrar ao SMART 1.</comment>
+<adequatelyNormalized>YES</adequatelyNormalized><expectedVolumes>0</expectedVolumes><fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName><growthPercent>0</growthPercent><growthType>Year</growthType><maxVolumes>999999999</maxVolumes><minVolumes>0</minVolumes><normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Identificador do acesso" id="9E279BF8-6D20-51C4-AE04-1A28A63DFC78">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Identificador técnico da visita/pesagem no Oracle.</comment>
+<useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,15,0</ownDataTypeParameters>
+</Attribute><Attribute name="Unidade da balança" id="901D2B39-A583-5158-AC86-BA891F088A64">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Código da unidade onde a pesagem será realizada.</comment>
+<useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+</Attribute><Attribute name="Placa do veículo" id="2FA3E957-0B9E-5783-A4D0-BCB11E5EF12D">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Placa do cavalo/veículo utilizada para localizar o acesso.</comment>
+<useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute><Attribute name="Tipo de documento" id="A9E2BDEF-BAD3-5890-B692-7AEC07CA0CB0">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Processo de origem atualmente contemplado: EPA, XFER ou OM.</comment>
+<useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute><Attribute name="Tipo de operação" id="6DFB997E-F521-5179-8ACF-5FC86FE9D183">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Momento da operação; usado em XFER para SAIDA ou ENTRADA.</comment>
+<nullsAllowed>true</nullsAllowed><useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute><Attribute name="Descrição documental/nota" id="7B4375BD-9DBF-56FD-A854-E39C9702FDC1">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Descrição textual consolidada dos documentos apresentados à balança; não é chave.</comment>
+<useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+</Attribute><Attribute name="Emissor" id="8A7CB41F-69D8-5FEA-9F1A-2AF0820758B7">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Descrição/nome consolidado do emissor.</comment>
+<useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>240</dataTypeSize>
+<ownDataTypeParameters>240,,</ownDataTypeParameters>
+</Attribute><Attribute name="Motorista" id="D0337B3A-F18C-5B8E-A654-4F2130D8E319">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Nome do motorista, quando disponível.</comment>
+<nullsAllowed>true</nullsAllowed><useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>240</dataTypeSize>
+<ownDataTypeParameters>240,,</ownDataTypeParameters>
+</Attribute><Attribute name="Transportador" id="78435574-C896-53ED-8102-4ED14E6E3C7F">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Nome/descrição do transportador, quando disponível.</comment>
+<nullsAllowed>true</nullsAllowed><useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>240</dataTypeSize>
+<ownDataTypeParameters>240,,</ownDataTypeParameters>
+</Attribute><Attribute name="Quantidade/peso previsto" id="0E554D57-2867-53EA-9C7E-F7A1F79C9BD4">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Quantidade ou peso previsto consolidado para a pesagem.</comment>
+<useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,15,3</ownDataTypeParameters>
+</Attribute><Attribute name="Acondicionamento" id="5F91C64A-D1F2-5C7B-957B-B2554AF62B03">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Acondicionamento consolidado, por exemplo BAG, GRANEL ou BAG / GRANEL; pode ser nulo para OM.</comment>
+<nullsAllowed>true</nullsAllowed><useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute><Attribute name="Destino" id="6A2350DB-2555-540E-B24D-7D47F303E4E9">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Descrição genérica de destino: organização de recebimento, destinatário ou cliente conforme o processo.</comment>
+<useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+</Attribute><Attribute name="Número da sequência" id="79959917-FE6F-5154-9526-8E52896D9483">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Reservado para integrações futuras; inicialmente gravado como NULL.</comment>
+<nullsAllowed>true</nullsAllowed><useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,15,0</ownDataTypeParameters>
+</Attribute><Attribute name="Ticket de origem" id="86D475B9-9EB6-5F9E-9572-7E1DF14A49C5">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Ticket válido da pesagem de saída; obrigatório por regra somente em XFER ENTRADA.</comment>
+<nullsAllowed>true</nullsAllowed><useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,15,0</ownDataTypeParameters>
+</Attribute><Attribute name="Unidade de origem" id="AF125E7B-DAD8-5E9A-9740-5AAE17C458EF">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Código da unidade de origem; obrigatório por regra em XFER ENTRADA.</comment>
+<nullsAllowed>true</nullsAllowed><useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+</Attribute><Attribute name="Peso líquido de origem" id="4C72F1A4-8F13-5889-A513-4ECE876537B7">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Peso líquido apurado na origem; obrigatório por regra em XFER ENTRADA.</comment>
+<nullsAllowed>true</nullsAllowed><useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,15,3</ownDataTypeParameters>
+</Attribute><Attribute name="Situação da integração" id="463BBCF3-E06A-56F5-A563-F442D4F9F976">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Estado multivalorado do ciclo Oracle → Libra → SMART 1.</comment>
+<useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute><Attribute name="Quantidade de tentativas" id="56786D34-C326-5A11-96D5-0A9713570626">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Quantidade de tentativas de integração realizadas.</comment>
+<useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+</Attribute><Attribute name="Data da última tentativa" id="96BBDD77-1A15-5074-9867-D4B186C51FD3">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Data/hora da tentativa de integração mais recente.</comment>
+<nullsAllowed>true</nullsAllowed><useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute><Attribute name="Data da próxima tentativa" id="9E10D4F3-C32C-56F5-B3ED-D23248E26130">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Data/hora a partir da qual um erro reprocessável pode ser tentado novamente.</comment>
+<nullsAllowed>true</nullsAllowed><useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute><Attribute name="Data de início do processamento" id="0F029192-26E8-5933-8FC7-8A18EB5F4911">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Momento em que o registro foi reservado/marcado como PROCESSANDO; permite detectar processamento abandonado.</comment>
+<nullsAllowed>true</nullsAllowed><useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute><Attribute name="Data de conclusão da integração" id="D206E4B9-C8CD-5D3A-AFBC-B9866B332612">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Data/hora em que a integração foi concluída com sucesso.</comment>
+<nullsAllowed>true</nullsAllowed><useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute><Attribute name="Código do último erro" id="B419260A-168F-5766-879A-97D978A4AAC4">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Código técnico do último erro de integração, quando aplicável.</comment>
+<nullsAllowed>true</nullsAllowed><useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute><Attribute name="Descrição do último erro" id="021372B6-F9A1-5EE9-B99F-3909CF1450D2">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Mensagem/descrição do último erro de integração.</comment>
+<nullsAllowed>true</nullsAllowed><useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute><Attribute name="Identificador do acesso no SMART" id="81C291C5-0EB7-52B9-93D3-567E66EF7E36">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Identificador externo retornado pelo SMART 1, caso o contrato o forneça.</comment>
+<nullsAllowed>true</nullsAllowed><useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute><Attribute name="Data de criação" id="8C30DC51-30D4-544C-985E-49DF6EFC203E">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Data de criação do registro.</comment>
+<useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute><Attribute name="Usuário de criação" id="869B06B1-3EA5-5576-8ABD-4232E6B9B2BC">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Usuário responsável pela criação do registro.</comment>
+<useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute><Attribute name="Data de alteração" id="64BA083F-4F43-51FF-9DA1-F0A0CA7C8342">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Data da última alteração do registro.</comment>
+<useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute><Attribute name="Usuário de alteração" id="1E1DE392-6003-5F87-87A4-29572D3F3C60">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<comment>Usuário responsável pela última alteração do registro.</comment>
+<useDomainConstraints>false</useDomainConstraints><use>1</use><logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E592AD8D-17A4-5CD5-9158-5284D8DC6A71" name="ACESSO PK"><createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName><engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo><pk>true</pk><usedAttributes><attributeRef>9E279BF8-6D20-51C4-AE04-1A28A63DFC78</attributeRef></usedAttributes></identifier>
+</identifiers>
+</Entity>

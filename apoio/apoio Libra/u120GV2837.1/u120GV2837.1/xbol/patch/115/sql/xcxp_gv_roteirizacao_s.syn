@@ -1,0 +1,39 @@
+WHENEVER SQLERROR CONTINUE;
+CONNECT &1/&2
+SET DEF OFF
+SET VERIFY OFF
+SPOOL XCXP_GV_ROTEIRIZACAO_S.syn.log
+SET SQLBLANKLINES ON
+
+PROMPT OBJETO: XCXP_GV_ROTEIRIZACAO_S.syn 
+
+-- $Version: XCXP_GV_ROTEIRIZACAO_S.syn 120.1 17/07/2025 11:00:00 tiagochagas ship $
+-- +=================================================================+
+-- |                  Copyright (c) 2025 COOXUPE                     |
+-- |                     All rights reserved.                        |
+-- +=================================================================+
+-- |   ARQUIVO                                                       |
+-- |     XCXP_GV_ROTEIRIZACAO_S                                      |
+-- |                                                                 |
+-- |   DESCRICAO                                                     |
+-- |     PRJ 2837 - Gestão de Veículos                               |
+-- |                                                                 |
+-- |   MODULO                                                        |
+-- |     GV                                                          |
+-- |                                                                 |
+-- |   CONTROLE DE VERSAO                                            |
+-- |     Versão: $Revision: 1.0 $                                    |
+-- |     Data  : $Date: 2025/07/17 11:00:00 $                        |
+-- |                                                                 |
+-- |   HISTORICO:                                                    |
+-- |               V1 - Criação objeto - tiagochagas                 |
+-- |                                                                 |
+-- +=================================================================+
+--
+
+CREATE OR REPLACE SYNONYM APPS.XCXP_GV_ROTEIRIZACAO_S FOR XXMCC.XCXP_GV_ROTEIRIZACAO_S
+
+/
+SHOW ERRORS
+SPOOL OFF
+EXIT;

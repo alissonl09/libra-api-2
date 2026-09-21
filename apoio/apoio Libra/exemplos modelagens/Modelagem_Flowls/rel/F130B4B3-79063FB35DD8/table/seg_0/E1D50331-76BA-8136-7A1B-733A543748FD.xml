@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E1D50331-76BA-8136-7A1B-733A543748FD" name="XCXP_FLW_AMOSTRA_RASTREIO_INT">
+<createdBy>joaofarias</createdBy>
+<createdTime>2026-01-29 18:34:56 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<ordsAlias>table_25</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_AMOSTRA_RASTREIO_INT" id="71960F68-439C-0F4B-94EB-27A67F36834E">
+<createdBy>joaofarias</createdBy>
+<createdTime>2026-01-29 18:37:27 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_AMOSTRA_INT" id="3234F916-E32B-C634-FDD6-77B90B6EA0DE">
+<createdBy>joaofarias</createdBy>
+<createdTime>2026-01-29 18:39:17 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4C172EAF-B1DA-9A1C-3669-83FD08348BE7" referredColumn="705CBC07-E51C-4587-EEDA-0D3B2BF00119"/>
+</associations>
+</Column>
+<Column name="CD_RASTREIO" id="86912551-5125-6D09-EEDD-80C9CBD785D2">
+<createdBy>joaofarias</createdBy>
+<createdTime>2026-01-29 18:40:18 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_USUARIO_CRIACAO" id="EDD7B2C8-4165-3EB4-EE86-BF3D84BFF674">
+<createdBy>joaofarias</createdBy>
+<createdTime>2026-01-29 18:40:33 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 BYTE</dataTypeSize>
+<ownDataTypeParameters>250 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_CRIACAO" id="8996DEE6-C8EB-0882-9DC8-463E455D3D0B">
+<createdBy>joaofarias</createdBy>
+<createdTime>2026-01-29 18:41:14 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_USUARIO_ALTERACAO" id="C5D1D961-536B-154E-D527-5C6C7921ABAE">
+<createdBy>joaofarias</createdBy>
+<createdTime>2026-01-29 18:42:01 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 BYTE</dataTypeSize>
+<ownDataTypeParameters>250 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_ALTERACAO" id="50DCC40E-19DF-460F-BB48-A9020FAEC501">
+<createdBy>joaofarias</createdBy>
+<createdTime>2026-01-29 18:43:07 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="79E1CE91-34AE-9B2B-2692-5DF428A3298D" name="XCXP_FLW_AMOSTRA_RASTREIO_INT_PK">
+<createdBy>joaofarias</createdBy>
+<createdTime>2026-01-29 18:37:49 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="71960F68-439C-0F4B-94EB-27A67F36834E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3CC9AA24-15AD-D03A-4E2A-700E511990B0" name="XCXP_FLW_AMOSTRA_RASTREIO_INT_UK">
+<createdBy>joaofarias</createdBy>
+<createdTime>2026-01-29 18:44:48 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="86912551-5125-6D09-EEDD-80C9CBD785D2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0EF3B81C-32E2-9FE3-E30E-01E94DF6DA21" name="XCXP_FLW_AMOSTRA_RASTREIO_INT_FK">
+<createdBy>joaofarias</createdBy>
+<createdTime>2026-01-29 18:44:01 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3234F916-E32B-C634-FDD6-77B90B6EA0DE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

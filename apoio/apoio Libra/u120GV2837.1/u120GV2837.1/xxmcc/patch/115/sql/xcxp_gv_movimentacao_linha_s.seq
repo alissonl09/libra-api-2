@@ -1,0 +1,41 @@
+WHENEVER SQLERROR CONTINUE;
+CONNECT &1/&2
+SET DEF OFF
+SET VERIFY OFF
+SET SQLBLANKLINES ON
+SPOOL XCXP_GV_MOVIMENTACAO_LINHA_S.log
+
+PROMPT OBJETO:  XCXP_GV_MOVIMENTACAO_LINHA_S.seq
+
+-- $Version: XCXP_GV_MOVIMENTACAO_LINHA_S.seq 120.1 17/07/2025 11:00:00 tiagochagas ship $
+-- +=================================================================+
+-- |                  Copyright (c) 2025 COOXUPE                     |
+-- |                     All rights reserved.                        |
+-- +=================================================================+
+-- |   ARQUIVO                                                       |
+-- |     XCXP_GV_MOVIMENTACAO_LINHA_S                                |
+-- |                                                                 |
+-- |   DESCRICAO                                                     |
+-- |     PRJ 2837 - Gestão de Veículos                               |
+-- |                                                                 |
+-- |   MODULO                                                        |
+-- |     GV                                                          |
+-- |                                                                 |
+-- |   CONTROLE DE VERSAO                                            |
+-- |     Versão: $Revision: 1.0 $                                    |
+-- |     Data  : $Date: 2025/07/17 11:00:00 $                        |
+-- |                                                                 |
+-- |   HISTORICO:                                                    |
+-- |               V1 - Criação objeto - tiagochagas                 |
+-- |                                                                 |
+-- +=================================================================+
+--
+
+DROP SEQUENCE XXMCC.XCXP_GV_MOVIMENTACAO_LINHA_S;
+
+CREATE SEQUENCE XXMCC.XCXP_GV_MOVIMENTACAO_LINHA_S START WITH 1 MAXVALUE 9999999999999999999999999999 NOCACHE ORDER
+
+/
+SHOW ERRORS
+SPOOL OFF
+EXIT;

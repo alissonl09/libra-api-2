@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.logical.DPVLogical" name="Modelo Lógico - Acesso de Pesagem" id="6B1C26AE-A6B9-5857-B91C-850C192B3A10">
+<createdBy>ChatGPT/OpenAI</createdBy><modifiedBy>ChatGPT/OpenAI</modifiedBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><autoRoute>false</autoRoute><boxInbox>true</boxInbox><showLegend>false</showLegend><showLabels>true</showLabels><showRelAttributes>true</showRelAttributes><gridEnabled>true</gridEnabled><showGrid>false</showGrid><diagramColor>-1</diagramColor><display>true</display><notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="B6F27EBC-9190-5F45-AB84-C1373453B042" otype="Entity" vid="EBAB522C-1C93-596F-8ACC-34F7BF52E376"><hideElementsInCurrentOnly>false</hideElementsInCurrentOnly><bounds x="60" y="80" width="330" height="520"/></OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="4105DD48-0D54-539C-9DFD-EC55E96B1012" otype="Entity" vid="D0552FE2-1CBA-5DD7-81AD-0C141B2C9446"><hideElementsInCurrentOnly>false</hideElementsInCurrentOnly><bounds x="570" y="170" width="350" height="250"/></OView>
+</objectViews>
+<connectors><Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="1EEA40EB-B5C9-5E45-AAE7-821CCD6BD293" otype="Relation" vid_source="EBAB522C-1C93-596F-8ACC-34F7BF52E376" vid_target="D0552FE2-1CBA-5DD7-81AD-0C141B2C9446"><hideElementsInCurrentOnly>false</hideElementsInCurrentOnly><backgroundColor>-16777216</backgroundColor><lineWidth>1</lineWidth><points><point x="390" y="300"/><point x="570" y="300"/></points></Connector></connectors>
+</Diagram>

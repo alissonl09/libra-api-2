@@ -1,0 +1,938 @@
+<mxfile host="Electron" agent="ChatGPT GPT-5.6 Sol" modifiedBy="ChatGPT - targeted EPA rules and dual-GRANEL sequence refinement">
+  <diagram id="epa-process-001" name="Fluxo EPA">
+    <mxGraphModel dx="1178" dy="716" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lane0" parent="1" style="swimlane;horizontal=0;startSize=175;collapsible=0;container=1;recursiveResize=0;fillColor=#F8FBFF;swimlaneFillColor=#F8FBFF;strokeColor=#94A3B8;strokeWidth=1;fontFamily=Arial;fontSize=14;fontStyle=1;fontColor=#1E293B;align=center;verticalAlign=middle;" value="Cooperado / Terceiro / Motorista" vertex="1">
+          <mxGeometry height="500" width="22220" x="120" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="coop_info" parent="lane0" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Cooperado informa à Cooxupé que irá depositar determinada quantidade de café, solicitando a Remessa para Depósito (RD)" vertex="1">
+          <mxGeometry height="74" width="245" x="600" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lane1" parent="1" style="swimlane;horizontal=0;startSize=175;collapsible=0;container=1;recursiveResize=0;fillColor=#FBFBFB;swimlaneFillColor=#FBFBFB;strokeColor=#94A3B8;strokeWidth=1;fontFamily=Arial;fontSize=14;fontStyle=1;fontColor=#1E293B;align=center;verticalAlign=middle;" value="Atendimento / Origem do Documento" vertex="1">
+          <mxGeometry height="500" width="22220" x="120" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" parent="1" style="swimlane;horizontal=0;startSize=175;collapsible=0;container=1;recursiveResize=0;fillColor=#F8FBFF;swimlaneFillColor=#F8FBFF;strokeColor=#94A3B8;strokeWidth=1;fontFamily=Arial;fontSize=14;fontStyle=1;fontColor=#1E293B;align=center;verticalAlign=middle;" value="Portaria" vertex="1">
+          <mxGeometry height="500" width="22220" x="120" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="lane3" parent="1" style="swimlane;horizontal=0;startSize=175;collapsible=0;container=1;recursiveResize=0;fillColor=#FBFBFB;swimlaneFillColor=#FBFBFB;strokeColor=#94A3B8;strokeWidth=1;fontFamily=Arial;fontSize=14;fontStyle=1;fontColor=#1E293B;align=center;verticalAlign=middle;" value="ERP / EPA" vertex="1">
+          <mxGeometry height="500" width="22220" x="120" y="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="data_epa" parent="lane3" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#A6A6A6;strokeWidth=1.2;fontFamily=Arial;fontSize=12;fontColor=#374151;verticalAlign=top;spacing=8;" value="&lt;b&gt;Dados obtidos do EPA&lt;/b&gt;&lt;br&gt;• Tipo do documento: EPA&lt;br&gt;• Número/documento relacionado&lt;br&gt;• Emissor / produtor / fornecedor&lt;br&gt;• Motorista&lt;br&gt;• Transportador&lt;br&gt;• Peso N.F.&lt;br&gt;• Acondicionamento&lt;br&gt;• Unidade/local de recebimento&lt;br&gt;&lt;br&gt;&lt;b&gt;Observação:&lt;/b&gt; o campo atualmente chamado “Destino” representa, na prática, o &lt;b&gt;Acondicionamento&lt;/b&gt;." vertex="1">
+          <mxGeometry height="245" width="360" x="4840" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="manual_info" parent="lane3" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#A6A6A6;strokeWidth=1.2;fontFamily=Arial;fontSize=12;fontColor=#374151;verticalAlign=top;spacing=8;" value="&lt;b&gt;Informações atualmente preenchidas manualmente&lt;/b&gt;&lt;br&gt;• Item&lt;br&gt;• Depósito&lt;br&gt;• Informações Complementares&lt;br&gt;&lt;br&gt;Para BAG, em Informações Complementares é registrada a quantidade de bags. O item depende da operação/acondicionamento e das regras de tolerância de peso." vertex="1">
+          <mxGeometry height="245" width="377.5" x="5260" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lane4" parent="1" style="swimlane;horizontal=0;startSize=175;collapsible=0;container=1;recursiveResize=0;fillColor=#F8FBFF;swimlaneFillColor=#F8FBFF;strokeColor=#94A3B8;strokeWidth=1;fontFamily=Arial;fontSize=14;fontStyle=1;fontColor=#1E293B;align=center;verticalAlign=middle;" value="Balanceiro / Sistema da Balança" vertex="1">
+          <mxGeometry height="500" width="22220" x="120" y="2100" as="geometry" />
+        </mxCell>
+        <mxCell id="bulk_tag" parent="lane4" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;fillColor=#E9F2DE;strokeColor=#6A8E3A;fontColor=#476228;" value="GRANEL" vertex="1">
+          <mxGeometry height="42" width="115" x="7500" y="197" as="geometry" />
+        </mxCell>
+        <mxCell id="bag_tag" parent="lane4" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;fillColor=#DCEBFA;strokeColor=#4F7DB8;fontColor=#294E7A;" value="BAG" vertex="1">
+          <mxGeometry height="42" width="115" x="6800" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="dual_total_note" parent="lane4" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#FFFCE8;strokeColor=#C9B458;strokeWidth=1.2;fontFamily=Arial;fontSize=12;fontColor=#374151;verticalAlign=top;spacing=8;" value="&lt;b&gt;Abertura inicial&lt;/b&gt;&lt;br&gt;Peso N.F. = BAGs + GRANEL" vertex="1">
+          <mxGeometry height="80" width="245" x="8155" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="r2ssSDDJX66W0Tbuk0IN-4" edge="1" parent="lane4" source="dual_tag" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1;strokeColor=#B59B2B;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 4;exitX=0.525;exitY=0.044;exitDx=0;exitDy=0;jumpStyle=arc;jumpSize=8;exitPerimeter=0;entryX=0.492;entryY=0.991;entryDx=0;entryDy=0;entryPerimeter=0;" target="dual_total_note" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="8272.5" y="430" as="sourcePoint" />
+            <mxPoint x="8277.5" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dual_tag" parent="lane4" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;fillColor=#F1E2F0;strokeColor=#A15C9D;fontColor=#6E3E6B;" value="BAG + GRANEL" vertex="1">
+          <mxGeometry height="42" width="145" x="8200" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="bag_ticket1" parent="lane4" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;shape=document;boundedLbl=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=1.5;spacing=8;" value="&lt;b&gt;Ticket 1&lt;/b&gt;&lt;br&gt;Peso efetivamente recebido no armazém / BAGs" vertex="1">
+          <mxGeometry height="82" width="205" x="15810" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="VB_GUb-S_NqHeq2EKdse-19" edge="1" parent="lane4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=-0.004;entryY=0.567;entryDx=0;entryDy=0;entryPerimeter=0;" target="bag_select" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="14664" y="90" />
+            </Array>
+            <mxPoint x="14650" y="90" as="sourcePoint" />
+            <mxPoint x="14685" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VB_GUb-S_NqHeq2EKdse-20" edge="1" parent="lane4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=-0.004;entryY=0.567;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="14894" y="90" />
+            </Array>
+            <mxPoint x="14880" y="90" as="sourcePoint" />
+            <mxPoint x="14919" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bag_ticket2" parent="lane4" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;shape=document;boundedLbl=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=1.5;spacing=8;" value="&lt;b&gt;Ticket 2&lt;/b&gt;&lt;br&gt;Pesos registrados na balança rodoviária" vertex="1">
+          <mxGeometry height="82" width="205" x="16080" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="VB_GUb-S_NqHeq2EKdse-27" edge="1" parent="lane4" style="endArrow=classic;html=1;rounded=0;strokeWidth=2.2;strokeColor=light-dark(#000000,#6C8B43);entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.996;exitY=0.536;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="13450" y="249.80000000000018" as="sourcePoint" />
+            <mxPoint x="13491" y="249.80000000000018" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r2ssSDDJX66W0Tbuk0IN-2" edge="1" parent="1" source="plate" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1;strokeColor=#B59B2B;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 4;edgeStyle=orthogonalEdgeStyle;curved=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=1;" target="plate_note" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lane5" parent="1" style="swimlane;horizontal=0;startSize=175;collapsible=0;container=1;recursiveResize=0;fillColor=#FBFBFB;swimlaneFillColor=#FBFBFB;strokeColor=#94A3B8;strokeWidth=1;fontFamily=Arial;fontSize=14;fontStyle=1;fontColor=#1E293B;align=center;verticalAlign=middle;" value="Balança Rodoviária" vertex="1">
+          <mxGeometry height="500" width="22220" x="120" y="2600" as="geometry" />
+        </mxCell>
+        <mxCell id="bulk_note" parent="lane5" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#FFFCE8;strokeColor=#C9B458;strokeWidth=1.2;fontFamily=Arial;fontSize=12;fontColor=#374151;verticalAlign=top;spacing=8;" value="&lt;b&gt;Regra — GRANEL&lt;/b&gt;&lt;br&gt;&lt;br&gt;No descarregamento a granel, o caminhão é posicionado em &lt;b&gt;tombadores hidráulicos&lt;/b&gt;; o café é despejado diretamente nas &lt;b&gt;moegas&lt;/b&gt; e segue para armazenagem nos &lt;b&gt;silos&lt;/b&gt;. Como não há pesagem individual do produto no armazém, a referência da quantidade recebida é o &lt;b&gt;Peso Líquido apurado pela diferença entre as pesagens da balança rodoviária&lt;/b&gt;." vertex="1">
+          <mxGeometry height="150" width="650" x="12980" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lane6" parent="1" style="swimlane;horizontal=0;startSize=175;collapsible=0;container=1;recursiveResize=0;fillColor=#F8FBFF;swimlaneFillColor=#F8FBFF;strokeColor=#94A3B8;strokeWidth=1;fontFamily=Arial;fontSize=14;fontStyle=1;fontColor=#1E293B;align=center;verticalAlign=middle;" value="Armazém / WMS / Balança de BAGs" vertex="1">
+          <mxGeometry height="500" width="22220" x="120" y="3100" as="geometry" />
+        </mxCell>
+        <mxCell id="VB_GUb-S_NqHeq2EKdse-2" edge="1" parent="lane6" style="endArrow=classic;html=1;rounded=0;exitX=1.003;exitY=0.522;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#5C79A3);strokeWidth=2.2;" target="bag_weigh" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="11390" y="88.86000000000013" as="sourcePoint" />
+            <mxPoint x="11423" y="88.86000000000013" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VB_GUb-S_NqHeq2EKdse-4" edge="1" parent="lane6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="11899" y="88" />
+              <mxPoint x="11906" y="88" />
+            </Array>
+            <mxPoint x="11885" y="88" as="sourcePoint" />
+            <mxPoint x="11920" y="88" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="title" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#1F4E78;strokeColor=#1F4E78;fontColor=#FFFFFF;fontFamily=Arial;fontSize=18;align=left;verticalAlign=middle;spacingLeft=18;" value="&lt;b&gt;PROCESSO EPA — ENTRADA DE PRODUTO AGRÍCOLA&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Fluxo de negócio completo: origem do documento → emissão do EPA → abertura → descarga → fechamento&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="1050" x="120" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="sec1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontFamily=Arial;fontSize=14;fontStyle=1;fontColor=#334155;align=center;verticalAlign=middle;" value="1. ORIGEM E PORTARIA" vertex="1">
+          <mxGeometry height="42" width="1450" x="1200" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="sec2" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontFamily=Arial;fontSize=14;fontStyle=1;fontColor=#334155;align=center;verticalAlign=middle;" value="2. EMISSÃO DO EPA" vertex="1">
+          <mxGeometry height="42" width="930" x="2680" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="sec3" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontFamily=Arial;fontSize=14;fontStyle=1;fontColor=#334155;align=center;verticalAlign=middle;" value="3. ABERTURA DA PESAGEM" vertex="1">
+          <mxGeometry height="42" width="3020" x="3640" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="sec4" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontFamily=Arial;fontSize=14;fontStyle=1;fontColor=#334155;align=center;verticalAlign=middle;" value="4. TRATAMENTO POR ACONDICIONAMENTO" vertex="1">
+          <mxGeometry height="42" width="15650" x="6690" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=50;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=1.7;fontStyle=1;spacing=8;" value="&lt;b&gt;INÍCIO&lt;/b&gt;&lt;br&gt;Necessidade de realizar&lt;br&gt;entrada de café" vertex="1">
+          <mxGeometry height="72" width="205" x="235" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="origem" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;shape=rhombus;perimeter=rhombusPerimeter;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.6;spacing=6;" value="&lt;b&gt;Origem da&lt;br&gt;carga?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="108" width="150" x="500" y="264" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="origem" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="465" y="322" />
+              <mxPoint x="465" y="318" />
+              <mxPoint x="486" y="318" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rd" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;shape=document;boundedLbl=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=1.5;spacing=8;" value="&lt;b&gt;Cooxupé emite RD&lt;/b&gt;&lt;br&gt;Remessa para Depósito" vertex="1">
+          <mxGeometry height="74" width="210" x="1040" y="705" as="geometry" />
+        </mxCell>
+        <mxCell id="coop_transport" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Motorista transporta o café até a unidade" vertex="1">
+          <mxGeometry height="68" width="220" x="1325" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="origem" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="coop_info" value="COOPERADO">
+          <mxGeometry relative="1" x="0.2452" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="575.03" y="197" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="coop_info" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="rd" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1010" y="197" />
+              <mxPoint x="1010" y="742.03" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="rd" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;" target="coop_transport" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1285" y="742" />
+              <mxPoint x="1285" y="239.03" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rd_note" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#FFFCE8;strokeColor=#C9B458;strokeWidth=1.2;fontFamily=Arial;fontSize=12;fontColor=#374151;verticalAlign=top;spacing=8;" value="&lt;b&gt;Regra da RD&lt;/b&gt;&lt;br&gt;A RD faz parte do regime especial utilizado pela Cooxupé para que o cooperado transporte o café sem necessidade de Nota Fiscal nessa operação." vertex="1">
+          <mxGeometry height="120" width="300" x="1005" y="803" as="geometry" />
+        </mxCell>
+        <mxCell id="nf" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;shape=document;boundedLbl=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=1.5;spacing=8;" value="&lt;b&gt;Terceiro emite Nota Fiscal&lt;/b&gt;&lt;br&gt;para transporte/entrada do café" vertex="1">
+          <mxGeometry height="78" width="235" x="1040" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="third_transport" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Motorista transporta o café e a NF até a unidade" vertex="1">
+          <mxGeometry height="68" width="220" x="1325" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="origem" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#8C6D46;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="nf" value="TERCEIRO / NÃO COOPERADO">
+          <mxGeometry relative="1" x="-0.5612" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="575" y="420" />
+              <mxPoint x="980" y="420" />
+              <mxPoint x="980" y="969" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="nf" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#8C6D46;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="third_transport" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1310" y="969" />
+              <mxPoint x="1310" y="464" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nf_note" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#FFFCE8;strokeColor=#C9B458;strokeWidth=1.2;fontFamily=Arial;fontSize=12;fontColor=#374151;verticalAlign=top;spacing=8;" value="&lt;b&gt;Regra do terceiro&lt;/b&gt;&lt;br&gt;Não existe emissão de RD. O terceiro não participa do regime especial e precisa transportar o café acompanhado de Nota Fiscal." vertex="1">
+          <mxGeometry height="78" width="300" x="1005" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="arrival" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Motorista chega à portaria do armazém" vertex="1">
+          <mxGeometry height="64" width="230" x="1603" y="288" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="coop_transport" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=1;" target="arrival" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1570" y="239" />
+              <mxPoint x="1570" y="307.2" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="third_transport" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#8C6D46;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.7;entryDx=0;entryDy=0;entryPerimeter=1;" target="arrival" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1570" y="464" />
+              <mxPoint x="1570" y="332.8" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="deliver_rd" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;shape=document;boundedLbl=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=1.5;spacing=8;" value="Entregar RD à Portaria" vertex="1">
+          <mxGeometry height="64" width="190" x="1900" y="1205" as="geometry" />
+        </mxCell>
+        <mxCell id="deliver_nf" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;shape=document;boundedLbl=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=1.5;spacing=8;" value="Entregar Nota Fiscal à Portaria" vertex="1">
+          <mxGeometry height="64" width="205" x="1900" y="1430" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="arrival" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;exitX=0.65;exitY=1;exitDx=0;exitDy=0;exitPerimeter=1;entryPerimeter=1;" target="deliver_rd" value="se cooperado">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1752.5" y="1237" />
+              <mxPoint x="1870" y="1237" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="arrival" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#8C6D46;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=0.35;exitY=1;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="deliver_nf" value="se terceiro">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1683.5" y="1462" />
+              <mxPoint x="1860" y="1462" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="confirm_pack" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Portaria confirma o &lt;b&gt;acondicionamento&lt;/b&gt; da carga com o motorista&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;BAG • GRANEL • BAG + GRANEL&lt;/font&gt;" vertex="1">
+          <mxGeometry height="84" width="250" x="2190" y="1278" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="deliver_rd" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=1;" target="confirm_pack" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2130" y="1237" />
+              <mxPoint x="2130" y="1303.2" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="deliver_nf" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.7;entryDx=0;entryDy=0;entryPerimeter=1;" target="confirm_pack" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2160" y="1462" />
+              <mxPoint x="2160" y="1336.8" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="register_info" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Registrar/anexar as informações necessárias para emissão do EPA" vertex="1">
+          <mxGeometry height="74" width="250" x="2480" y="1282" as="geometry" />
+        </mxCell>
+        <mxCell id="wait_yard" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Motorista aguarda no pátio para ser chamado" vertex="1">
+          <mxGeometry height="70" width="250" x="2480" y="284" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="register_info" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1;strokeColor=#777777;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 4;curved=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=1;" target="wait_yard" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="epa_emit" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="&lt;b&gt;Emitir EPA&lt;/b&gt;&lt;br&gt;Entrada de Produto Agrícola" vertex="1">
+          <mxGeometry height="70" width="220" x="2780" y="1784" as="geometry" />
+        </mxCell>
+        <mxCell id="epa_approve" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Aprovar EPA" vertex="1">
+          <mxGeometry height="58" width="170" x="3050" y="1790" as="geometry" />
+        </mxCell>
+        <mxCell id="epa_doc" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;shape=document;boundedLbl=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=1.5;spacing=8;" value="&lt;b&gt;Imprimir EPA&lt;/b&gt;" vertex="1">
+          <mxGeometry height="62" width="170" x="3270" y="1788" as="geometry" />
+        </mxCell>
+        <mxCell id="deliver_epa" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Entregar EPA ao balanceiro" vertex="1">
+          <mxGeometry height="62" width="205" x="3490" y="1788" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="register_info" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="epa_emit" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2755" y="1319" />
+              <mxPoint x="2755" y="1819" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="epa_emit" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="epa_approve" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e21" edge="1" parent="1" source="epa_approve" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="epa_doc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e22" edge="1" parent="1" source="epa_doc" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="deliver_epa" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="epa_note" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#FFFCE8;strokeColor=#C9B458;strokeWidth=1.2;fontFamily=Arial;fontSize=12;fontColor=#374151;verticalAlign=top;spacing=8;" value="&lt;b&gt;Origem das informações do EPA&lt;/b&gt;&lt;br&gt;• Cooperado → RD&lt;br&gt;• Terceiro → Nota Fiscal&lt;br&gt;&lt;br&gt;O EPA registra que o veículo chegou com a carga e reúne as informações necessárias para a pesagem." vertex="1">
+          <mxGeometry height="125" width="330" x="2770" y="1925" as="geometry" />
+        </mxCell>
+        <mxCell id="e23" edge="1" parent="1" source="epa_emit" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1;strokeColor=#B59B2B;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 4;curved=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=1;" target="epa_note" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2890" y="1885" />
+              <mxPoint x="2935" y="1885" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="call_driver" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Balanceiro chama o veículo para abertura de peso" vertex="1">
+          <mxGeometry height="70" width="225" x="3750" y="2284" as="geometry" />
+        </mxCell>
+        <mxCell id="move_scale" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Motorista segue com o caminhão para a balança rodoviária" vertex="1">
+          <mxGeometry height="74" width="240" x="4025" y="282" as="geometry" />
+        </mxCell>
+        <mxCell id="position" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Posicionar veículo sobre a balança rodoviária" vertex="1">
+          <mxGeometry height="70" width="220" x="4300" y="2784" as="geometry" />
+        </mxCell>
+        <mxCell id="capture" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Capturar peso do indicador da balança" vertex="1">
+          <mxGeometry height="70" width="215" x="4570" y="2784" as="geometry" />
+        </mxCell>
+        <mxCell id="plate" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Informar placa do veículo" vertex="1">
+          <mxGeometry height="62" width="195" x="4850" y="2288" as="geometry" />
+        </mxCell>
+        <mxCell id="load_epa" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Carregar informações do EPA na pesagem a partir da placa." vertex="1">
+          <mxGeometry height="70" width="220" x="5250" y="2284" as="geometry" />
+        </mxCell>
+        <mxCell id="check" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Conferir dados para pesagem" vertex="1">
+          <mxGeometry height="62" width="195" x="5660" y="2288" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="&lt;b&gt;Registrar Pesagem 1&lt;/b&gt;&lt;br&gt;Abertura do Peso" vertex="1">
+          <mxGeometry height="70" width="200" x="5910" y="2284" as="geometry" />
+        </mxCell>
+        <mxCell id="save_open" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Salvar abertura da pesagem" vertex="1">
+          <mxGeometry height="62" width="195" x="6170" y="2288" as="geometry" />
+        </mxCell>
+        <mxCell id="pack_decision" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;shape=rhombus;perimeter=rhombusPerimeter;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.6;spacing=6;" value="&lt;b&gt;Qual o acondicionamento&lt;br&gt;do EPA?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="116" width="180" x="6440" y="2260" as="geometry" />
+        </mxCell>
+        <mxCell id="e24" edge="1" parent="1" source="deliver_epa" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="call_driver" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3720" y="1819" />
+              <mxPoint x="3720" y="2319" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e25" edge="1" parent="1" source="wait_yard" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1;strokeColor=#777777;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 4;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=1;" target="call_driver" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2820" y="319" />
+              <mxPoint x="3862.5" y="319" />
+              <mxPoint x="3862.5" y="2245" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e26" edge="1" parent="1" source="call_driver" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="move_scale" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4000" y="2319" />
+              <mxPoint x="4000" y="319" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e27" edge="1" parent="1" source="move_scale" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="position" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4280" y="319" />
+              <mxPoint x="4280" y="2819" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e28" edge="1" parent="1" source="position" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="capture" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e29" edge="1" parent="1" source="capture" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="plate" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4815" y="2819" />
+              <mxPoint x="4815" y="2319" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e30" edge="1" parent="1" source="plate" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryPerimeter=1;" target="load_epa" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e32" edge="1" parent="1" source="load_epa" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="check" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e33" edge="1" parent="1" source="check" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="p1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e34" edge="1" parent="1" source="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="save_open" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e35" edge="1" parent="1" source="save_open" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="pack_decision" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="6395" y="2319" />
+              <mxPoint x="6395" y="2318" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="plate_note" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#FFFCE8;strokeColor=#C9B458;strokeWidth=1.2;fontFamily=Arial;fontSize=12;fontColor=#374151;verticalAlign=top;spacing=8;" value="A placa pode ser digitada manualmente ou identificada por leitura de código de barras, conforme o processo atual." vertex="1">
+          <mxGeometry height="100" width="300" x="4770" y="2160" as="geometry" />
+        </mxCell>
+        <mxCell id="e37" edge="1" parent="1" source="load_epa" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1;strokeColor=#8A8A8A;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 4;curved=0;exitX=0.3;exitY=0;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=1;" target="data_epa" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="5316" y="1920" />
+              <mxPoint x="5140" y="1920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e38" edge="1" parent="1" source="load_epa" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1;strokeColor=#8A8A8A;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 4;curved=0;exitX=0.7;exitY=0;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=1;" target="manual_info" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="5404" y="1950" />
+              <mxPoint x="5568.75" y="1950" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e39" edge="1" parent="1" source="pack_decision" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.5;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;jumpStyle=arc;jumpSize=8;" target="bag_tag" value="BAG">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="6530" y="2136" />
+              <mxPoint x="6906" y="2136" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e40" edge="1" parent="1" source="pack_decision" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.5;strokeColor=#6A8E3A;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;jumpStyle=arc;jumpSize=8;" target="bulk_tag" value="GRANEL">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="7050" y="2318" />
+              <mxPoint x="7606" y="2318" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e41" edge="1" parent="1" source="pack_decision" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.5;strokeColor=#A15C9D;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;jumpStyle=arc;jumpSize=8;" target="dual_tag" value="BAG + GRANEL">
+          <mxGeometry relative="1" x="0.3528" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="6530" y="2551" />
+              <mxPoint x="8306" y="2551" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bag_vehicle" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Veículo segue para descarga de BAGs" vertex="1">
+          <mxGeometry height="62" width="220" x="8850" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="bag_receive" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Receber veículo na área de descarga de BAGs" vertex="1">
+          <mxGeometry height="68" width="220" x="11050" y="3155" as="geometry" />
+        </mxCell>
+        <mxCell id="bag_unload" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Descarregar BAGs individualmente" vertex="1">
+          <mxGeometry height="64" width="205" x="11305" y="3155" as="geometry" />
+        </mxCell>
+        <mxCell id="bag_weigh" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Pesar cada BAG na balança de BAGs" vertex="1">
+          <mxGeometry height="66" width="210" x="11545" y="3155" as="geometry" />
+        </mxCell>
+        <mxCell id="bag_wms" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Registrar os pesos recebidos no WMS" vertex="1">
+          <mxGeometry height="66" width="215" x="11790" y="3155" as="geometry" />
+        </mxCell>
+        <mxCell id="bag_sum" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Somar peso efetivamente recebido dos BAGs" vertex="1">
+          <mxGeometry height="70" width="225" x="12040" y="3155" as="geometry" />
+        </mxCell>
+        <mxCell id="bag_return" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Veículo retorna à balança rodoviária para fechamento do peso" vertex="1">
+          <mxGeometry height="72" width="230" x="12320" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="bag_consult" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Consultar veículos com pesagem em aberto" vertex="1">
+          <mxGeometry height="68" width="220" x="14550" y="2155" as="geometry" />
+        </mxCell>
+        <mxCell id="bag_select" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Selecionar a placa do veículo" vertex="1">
+          <mxGeometry height="62" width="190" x="14810" y="2155" as="geometry" />
+        </mxCell>
+        <mxCell id="bag_recover" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Recuperar dados salvos na abertura" vertex="1">
+          <mxGeometry height="66" width="210" x="15040" y="2155" as="geometry" />
+        </mxCell>
+        <mxCell id="bag_update" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Atualizar Peso N.F. com o peso efetivamente recebido dos BAGs" vertex="1">
+          <mxGeometry height="78" width="240" x="15290" y="2149" as="geometry" />
+        </mxCell>
+        <mxCell id="bag_close" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Registrar pesagem de fechamento" vertex="1">
+          <mxGeometry height="66" width="205" x="15570" y="2155" as="geometry" />
+        </mxCell>
+        <mxCell id="bag_save" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Salvar pesagem" vertex="1">
+          <mxGeometry height="56" width="160" x="15815" y="2160" as="geometry" />
+        </mxCell>
+        <mxCell id="bag_end" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=50;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=1.7;fontStyle=1;spacing=8;" value="&lt;b&gt;FIM DA PESAGEM&lt;/b&gt;&lt;br&gt;EPA – BAG" vertex="1">
+          <mxGeometry height="70" width="190" x="16640" y="2150" as="geometry" />
+        </mxCell>
+        <mxCell id="e42" edge="1" parent="1" source="bag_tag" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;jumpStyle=arc;jumpSize=8;" target="bag_vehicle" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="8800" y="2136" />
+              <mxPoint x="8800" y="186" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e43" edge="1" parent="1" source="bag_vehicle" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0.4091;entryY=0;entryDx=0;entryDy=0;entryPerimeter=1;" target="bag_receive" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="11140" y="186" />
+              <mxPoint x="11140" y="3155" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e46" edge="1" parent="1" source="bag_weigh" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="bag_wms" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="11769" y="3188" />
+              <mxPoint x="11776" y="3188" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bag_note" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#FFFCE8;strokeColor=#C9B458;strokeWidth=1.2;fontFamily=Arial;fontSize=12;fontColor=#374151;verticalAlign=top;spacing=8;" value="&lt;b&gt;Regras importantes — BAG&lt;/b&gt;&lt;br&gt;• O peso efetivamente recebido vem das pesagens da balança de BAGs registradas no WMS.&lt;br&gt;• Existe peso parametrizado da embalagem/BAG no ERP e ele é considerado no cálculo da diferença.&lt;br&gt;• Peso Líquido e Peso Seco calculados pela balança rodoviária não são a referência final da quantidade recebida, pois a balança de BAGs fornece o peso exato descarregado." vertex="1">
+          <mxGeometry height="185" width="760" x="15030" y="1885" as="geometry" />
+        </mxCell>
+        <mxCell id="bulk_vehicle" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Veículo segue para descarga a granel" vertex="1">
+          <mxGeometry height="62" width="220" x="9250" y="318" as="geometry" />
+        </mxCell>
+        <mxCell id="bulk_unload" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Descarregar café a granel nos tombadores hidráulicos." vertex="1">
+          <mxGeometry height="60" width="200" x="10650" y="3318" as="geometry" />
+        </mxCell>
+        <mxCell id="bulk_return" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Veículo retorna à balança rodoviária" vertex="1">
+          <mxGeometry height="62" width="220" x="12570" y="318" as="geometry" />
+        </mxCell>
+        <mxCell id="bulk_select" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Selecionar pesagem GRANEL em aberto" vertex="1">
+          <mxGeometry height="68" width="225" x="12830" y="2318" as="geometry" />
+        </mxCell>
+        <mxCell id="bulk_close_weigh" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Realizar pesagem de fechamento" vertex="1">
+          <mxGeometry height="66" width="210" x="13095" y="2318" as="geometry" />
+        </mxCell>
+        <mxCell id="bulk_calc" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Calcular Peso Líquido pela balança rodoviária" vertex="1">
+          <mxGeometry height="70" width="225" x="13345" y="2318" as="geometry" />
+        </mxCell>
+        <mxCell id="bulk_register" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Registrar fechamento da pesagem" vertex="1">
+          <mxGeometry height="66" width="215" x="13610" y="2318" as="geometry" />
+        </mxCell>
+        <mxCell id="bulk_save" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Salvar pesagem" vertex="1">
+          <mxGeometry height="56" width="160" x="13860" y="2318" as="geometry" />
+        </mxCell>
+        <mxCell id="bulk_ticket" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;shape=document;boundedLbl=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=1.5;spacing=8;" value="&lt;b&gt;1 ticket&lt;/b&gt;&lt;br&gt;referente ao GRANEL" vertex="1">
+          <mxGeometry height="68" width="180" x="14060" y="2318" as="geometry" />
+        </mxCell>
+        <mxCell id="bulk_end" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=50;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=1.7;fontStyle=1;spacing=8;" value="&lt;b&gt;FIM DA PESAGEM&lt;/b&gt;&lt;br&gt;EPA – GRANEL" vertex="1">
+          <mxGeometry height="70" width="190" x="14280" y="2317" as="geometry" />
+        </mxCell>
+        <mxCell id="e61" edge="1" parent="1" source="bulk_tag" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#6A8E3A;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;jumpStyle=arc;jumpSize=8;" target="bulk_vehicle" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="9200" y="2318" />
+              <mxPoint x="9200" y="349" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e62" edge="1" parent="1" source="bulk_vehicle" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#6A8E3A;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="bulk_unload" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="10600" y="349" />
+              <mxPoint x="10600" y="3348" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dual_bag_vehicle" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Veículo segue primeiro para descarga dos BAGs" vertex="1">
+          <mxGeometry height="66" width="225" x="9650" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="dual_bag_unload" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Descarregar BAGs individualmente" vertex="1">
+          <mxGeometry height="64" width="205" x="10250" y="3480" as="geometry" />
+        </mxCell>
+        <mxCell id="transition" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FBE5D6;strokeColor=#C97A40;strokeWidth=2;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#7C3F16;align=center;verticalAlign=middle;spacing=8;" value="&lt;b&gt;PREPARAR PESAGEM DA PARCELA GRANEL RESTANTE&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;O EPA ainda não terminou&lt;/font&gt;" vertex="1">
+          <mxGeometry height="82" width="260" x="17810" y="2480" as="geometry" />
+        </mxCell>
+        <mxCell id="dual_open_bulk" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Abrir pesagem referente ao GRANEL" vertex="1">
+          <mxGeometry height="66" width="215" x="18975" y="2488" as="geometry" />
+        </mxCell>
+        <mxCell id="dual_update_nf" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Carregar novamente os dados do EPA com o Peso N.F. ajustado para a quantidade restante" vertex="1">
+          <mxGeometry height="82" width="315" x="18370" y="2480" as="geometry" />
+        </mxCell>
+        <mxCell id="dual_bulk_vehicle" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Veículo segue para descarga do café a granel" vertex="1">
+          <mxGeometry height="68" width="225" x="19265" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="dual_bulk_unload" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="Descarregar café a granel nos tombadores hidráulicos." vertex="1">
+          <mxGeometry height="60" width="190" x="19565" y="3480" as="geometry" />
+        </mxCell>
+        <mxCell id="dual_end" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=50;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=1.7;fontStyle=1;spacing=8;" value="&lt;b&gt;FIM DA PESAGEM&lt;/b&gt;&lt;br&gt;EPA – BAG + GRANEL" vertex="1">
+          <mxGeometry height="74" width="215" x="20235" y="2480" as="geometry" />
+        </mxCell>
+        <mxCell id="e73" edge="1" parent="1" source="dual_tag" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#A15C9D;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;jumpStyle=arc;jumpSize=8;" target="dual_bag_vehicle" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="9600" y="2551" />
+              <mxPoint x="9600" y="513" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e74" edge="1" parent="1" source="dual_bag_vehicle" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#A15C9D;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="dual_bag_unload" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="10200" y="513" />
+              <mxPoint x="10200" y="3512" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="formula_note" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#FFFCE8;strokeColor=#C9B458;strokeWidth=1.2;fontFamily=Arial;fontSize=12;fontColor=#374151;verticalAlign=top;spacing=8;" value="&lt;b&gt;Regra da transição BAG → GRANEL&lt;/b&gt;&lt;br&gt;&lt;b&gt;Peso N.F. do GRANEL &lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 0, 0));&quot;&gt;=&lt;/span&gt; Peso total previsto do EPA &lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 0, 0));&quot;&gt;–&lt;/span&gt; Quantidade efetivamente recebida em BAGs&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ao pesquisar novamente a placa para iniciar a etapa GRANEL, os dados do EPA são carregados novamente e o Peso N.F. já representa somente a quantidade restante, pois a parcela recebida em BAGs já foi considerada no fechamento anterior." vertex="1">
+          <mxGeometry height="165" width="900" x="18265" y="2780" as="geometry" />
+        </mxCell>
+        <mxCell id="summary_title" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=#334155;fontFamily=Arial;fontSize=15;fontStyle=1;fontColor=#FFFFFF;align=center;verticalAlign=middle;" value="&lt;b&gt;REGRAS CONFORME ACONDICIONAMENTO&lt;/b&gt;" vertex="1">
+          <mxGeometry height="44" width="2060" x="20020" y="3615" as="geometry" />
+        </mxCell>
+        <mxCell id="summary_bag" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#4F7DB8;fontFamily=Arial;fontSize=12;fontColor=#294E7A;verticalAlign=top;spacing=10;" value="&lt;b&gt;BAG&lt;/b&gt;&lt;br&gt;• Peso recebido: balança de BAGs / WMS&lt;br&gt;• Peso de embalagem parametrizado é considerado&lt;br&gt;• Peso líquido rodoviário não é a referência final recebida&lt;br&gt;• &lt;b&gt;2 tickets&lt;/b&gt;" vertex="1">
+          <mxGeometry height="185" width="650" x="20020" y="3670" as="geometry" />
+        </mxCell>
+        <mxCell id="summary_bulk" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F2F8EA;strokeColor=#6A8E3A;fontFamily=Arial;fontSize=12;fontColor=#476228;verticalAlign=top;spacing=10;" value="&lt;b&gt;GRANEL&lt;/b&gt;&lt;br&gt;• Não há pesagem individual no armazém&lt;br&gt;• Considera o Peso Líquido da balança rodoviária&lt;br&gt;• &lt;b&gt;1 ticket&lt;/b&gt;" vertex="1">
+          <mxGeometry height="185" width="650" x="20685" y="3670" as="geometry" />
+        </mxCell>
+        <mxCell id="summary_dual" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FAF0FA;strokeColor=#A15C9D;fontFamily=Arial;fontSize=12;fontColor=#6E3E6B;verticalAlign=top;spacing=10;" value="&lt;b&gt;BAG + GRANEL&lt;/b&gt;&lt;br&gt;• Peso N.F. inicial = BAG + GRANEL&lt;br&gt;• BAG é processado primeiro e gera &lt;b&gt;2 tickets&lt;/b&gt;&lt;br&gt;• Depois abre-se nova etapa GRANEL com o saldo do EPA&lt;br&gt;• GRANEL segue sua regra e gera &lt;b&gt;1 ticket&lt;/b&gt;" vertex="1">
+          <mxGeometry height="185" width="730" x="21350" y="3670" as="geometry" />
+        </mxCell>
+        <mxCell id="two_decisions" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#A6A6A6;strokeWidth=1.2;fontFamily=Arial;fontSize=12;fontColor=#374151;verticalAlign=top;spacing=8;" value="&lt;b&gt;Duas decisões diferentes&lt;/b&gt;&lt;br&gt;1) Documento de origem: Cooperado → RD | Terceiro → Nota Fiscal&lt;br&gt;2) Forma de acondicionamento: BAG | GRANEL | BAG + GRANEL" vertex="1">
+          <mxGeometry height="105" width="720" x="120" y="3635" as="geometry" />
+        </mxCell>
+        <mxCell id="dual_sequence_note" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FBE5D6;strokeColor=#C97A40;strokeWidth=1.5;fontFamily=Arial;fontSize=12;fontColor=#7C3F16;verticalAlign=top;spacing=10;" value="&lt;b&gt;Sequência obrigatória no duplo acondicionamento&lt;/b&gt;&lt;br&gt;Abertura com carga total → BAG → fechamento BAG → nova etapa GRANEL → fechamento GRANEL → encerramento do EPA" vertex="1">
+          <mxGeometry height="105" width="1150" x="880" y="3635" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=10;fontColor=#64748B;" value="Fluxograma de processo de negócio — EPA (Entrada de Produto Agrícola) • Elementos e conexões editáveis no draw.io / diagrams.net" vertex="1">
+          <mxGeometry height="30" width="12030" x="10050" y="3900" as="geometry" />
+        </mxCell>
+        <mxCell id="bYINcxhby7xEHFTpnhaz-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;span style=&quot;color: light-dark(rgb(196, 204, 216), rgb(255, 255, 255));&quot;&gt;&lt;b style=&quot;font-family: Arial; font-size: 11px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/b&gt;&lt;b style=&quot;font-family: Arial;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Legenda&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="660" x="990" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_proc" parent="1" style="fontFamily=Arial;fontSize=11;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;spacing=8;" value="&amp;nbsp; &amp;nbsp;Processo" vertex="1">
+          <mxGeometry height="36" width="120" x="1140" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_dec" parent="1" style="fontFamily=Arial;fontSize=11;fontColor=#1F2937;whiteSpace=wrap;html=1;shape=rhombus;perimeter=rhombusPerimeter;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.6;spacing=6;" value="Decisão" vertex="1">
+          <mxGeometry height="42" width="105" x="1270" y="73" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_doc" parent="1" style="fontFamily=Arial;fontSize=11;fontColor=#1F2937;whiteSpace=wrap;html=1;shape=document;boundedLbl=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=1.5;spacing=8;" value="Documento" vertex="1">
+          <mxGeometry height="42" width="125" x="1385" y="73" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_sys" parent="1" style="fontFamily=Arial;fontSize=11;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Sistema" vertex="1">
+          <mxGeometry height="36" width="120" x="1520" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="v5g_unload_return" edge="1" parent="1" source="bulk_unload" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#6A8E3A;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="bulk_return" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="12540" y="3348" />
+              <mxPoint x="12540" y="349" />
+              <mxPoint x="12555" y="349" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5g_return_select" edge="1" parent="1" source="bulk_return" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#6A8E3A;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="bulk_select" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="12805" y="349" />
+              <mxPoint x="12805" y="2352" />
+              <mxPoint x="12815" y="2352" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5g_ticket_end" edge="1" parent="1" source="bulk_ticket" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#6A8E3A;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="bulk_end" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="14255" y="2352" />
+              <mxPoint x="14267" y="2352" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5g_note" edge="1" parent="1" source="bulk_calc" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.2;strokeColor=#C59B27;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;dashed=1;dashPattern=6 4;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0.55;entryY=0.008;entryDx=0;entryDy=0;entryPerimeter=0;" target="bulk_note" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="13457.52" y="2771.904761904762" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bag_emit2_v5" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Emitir automaticamente&lt;br&gt;&lt;b&gt;2 tickets&lt;/b&gt;" vertex="1">
+          <mxGeometry height="66" width="205" x="16015" y="2155" as="geometry" />
+        </mxCell>
+        <mxCell id="v5b_sum_return" edge="1" parent="1" source="bag_sum" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="bag_return" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="12280" y="3190" />
+              <mxPoint x="12280" y="191" />
+              <mxPoint x="12305" y="191" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5b_return_consult" edge="1" parent="1" source="bag_return" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="bag_consult" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="12565" y="191" />
+              <mxPoint x="14515" y="191" />
+              <mxPoint x="14515" y="2189" />
+              <mxPoint x="14535" y="2189" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5b_recover_update" edge="1" parent="1" source="bag_recover" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="bag_update" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="15265" y="2188" />
+              <mxPoint x="15275" y="2188" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5b_update_close" edge="1" parent="1" source="bag_update" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="bag_close" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="15545" y="2188" />
+              <mxPoint x="15555" y="2188" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5b_close_save" edge="1" parent="1" source="bag_close" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="bag_save" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="15790" y="2188" />
+              <mxPoint x="15802" y="2188" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5b_save_emit" edge="1" parent="1" source="bag_save" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="bag_emit2_v5" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="15990" y="2188" />
+              <mxPoint x="16002" y="2188" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5b_emit_end" edge="1" parent="1" source="bag_emit2_v5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="bag_end" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="16235" y="2188" />
+              <mxPoint x="16625" y="2188" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5b_note" edge="1" parent="1" source="bag_note" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.2;strokeColor=#C59B27;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;dashed=1;dashPattern=6 4;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=1;" target="bag_update" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="15410" y="2085" />
+              <mxPoint x="15410" y="2134" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dual_bag_sub_v5" parent="1" style="shape=process;whiteSpace=wrap;html=1;rounded=1;arcSize=10;fillColor=#F3EAF6;strokeColor=#9673A6;strokeWidth=1.8;fontFamily=Arial;fontSize=12;fontColor=#5C3B6F;fontStyle=1;spacing=8;" value="&lt;b&gt;ETAPA BAG — mesmo fluxo da descarga do BAG&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Pesagem dos BAGs → WMS → peso efetivamente recebido&lt;/font&gt;" vertex="1">
+          <mxGeometry height="105" width="320" x="17100" y="3440" as="geometry" />
+        </mxCell>
+        <mxCell id="dual_bag_close_v5" parent="1" style="shape=process;whiteSpace=wrap;html=1;rounded=1;arcSize=10;fillColor=#F3EAF6;strokeColor=#9673A6;strokeWidth=1.8;fontFamily=Arial;fontSize=12;fontColor=#5C3B6F;fontStyle=1;spacing=8;" value="&lt;b&gt;Fechar o peso da etapa BAG&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;Atualizar peso recebido e emitir 2 tickets&lt;/font&gt;" vertex="1">
+          <mxGeometry height="82" width="280" x="17480" y="2480" as="geometry" />
+        </mxCell>
+        <mxCell id="dual_bulk_close_v5" parent="1" style="shape=process;whiteSpace=wrap;html=1;rounded=1;arcSize=10;fillColor=#F3EAF6;strokeColor=#9673A6;strokeWidth=1.8;fontFamily=Arial;fontSize=12;fontColor=#5C3B6F;fontStyle=1;spacing=8;" value="&lt;b&gt;Fechar etapa GRANEL&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;Mesmas regras do GRANEL: Peso Líquido da balança → 1 ticket&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="320" x="19865" y="2480" as="geometry" />
+        </mxCell>
+        <mxCell id="v5d_unload_bagsub" edge="1" parent="1" source="dual_bag_unload" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#A15C9D;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0.001;entryY=0.686;entryDx=0;entryDy=0;entryPerimeter=0;" target="dual_bag_sub_v5" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5d_bagsub_close" edge="1" parent="1" source="dual_bag_sub_v5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#A15C9D;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="dual_bag_close_v5" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="17260" y="3425" />
+              <mxPoint x="17260" y="2521" />
+              <mxPoint x="17465" y="2521" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5d_close_transition" edge="1" parent="1" source="dual_bag_close_v5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#A15C9D;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="transition" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="17775" y="2521" />
+              <mxPoint x="17795" y="2521" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5d_transition_open" edge="1" parent="1" source="transition" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#A15C9D;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="dual_search_plate_again" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="18085" y="2521" />
+              <mxPoint x="18095" y="2521" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5d_open_update" edge="1" parent="1" source="dual_search_plate_again" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#A15C9D;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="dual_update_nf" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="18345" y="2521" />
+              <mxPoint x="18355" y="2521" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5d_formula" edge="1" parent="1" source="dual_update_nf" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.2;strokeColor=#C59B27;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;dashed=1;dashPattern=6 4;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0.292;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="formula_note" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="18527.5" y="2770" />
+              <mxPoint x="18527.81" y="2770" />
+            </Array>
+            <mxPoint x="18520" y="2770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5d_update_vehicle" edge="1" parent="1" source="dual_open_bulk" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#A15C9D;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="dual_bulk_vehicle" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="19210" y="2521" />
+              <mxPoint x="19230" y="2521" />
+              <mxPoint x="19230" y="514" />
+              <mxPoint x="19250" y="514" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5d_vehicle_unload" edge="1" parent="1" source="dual_bulk_vehicle" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#A15C9D;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="dual_bulk_unload" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="19505" y="514" />
+              <mxPoint x="19525" y="514" />
+              <mxPoint x="19525" y="3510" />
+              <mxPoint x="19550" y="3510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5d_unload_close" edge="1" parent="1" source="dual_bulk_unload" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#A15C9D;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="dual_bulk_close_v5" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="19780" y="3510" />
+              <mxPoint x="19820" y="3510" />
+              <mxPoint x="19820" y="2524" />
+              <mxPoint x="19850" y="2524" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5d_close_end" edge="1" parent="1" source="dual_bulk_close_v5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#A15C9D;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="dual_end" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20200" y="2524" />
+              <mxPoint x="20220" y="2524" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bag_wms_input_v7" parent="1" style="shape=parallelogram;whiteSpace=wrap;html=1;fillColor=#F1E8F7;strokeColor=#7A4E9D;strokeWidth=1.5;fontFamily=Arial;fontSize=12;fontColor=#333333;align=center;verticalAlign=middle;" value="&lt;b&gt;WMS → Sistema da Balança&lt;/b&gt;&lt;br&gt; Peso total dos BAGs recebidos" vertex="1">
+          <mxGeometry height="72" width="240" x="15290" y="2285" as="geometry" />
+        </mxCell>
+        <mxCell id="bag_wms_input_edge_v7" edge="1" parent="1" source="bag_wms_input_v7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#7A4E9D;dashed=1;dashPattern=6 4;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=1;" target="bag_update" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="15410" y="2255" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VB_GUb-S_NqHeq2EKdse-1" edge="1" parent="1" source="bag_receive" style="endArrow=classic;html=1;rounded=0;exitX=1.003;exitY=0.522;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.003;entryY=0.548;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=light-dark(#000000,#5C79A3);strokeWidth=2.2;" target="bag_unload" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="11340" y="3200" as="sourcePoint" />
+            <mxPoint x="11390" y="3150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VB_GUb-S_NqHeq2EKdse-21" edge="1" parent="1" source="bag_emit2_v5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#4F7DB8;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=0.477;exitY=1.007;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="bag_ticket1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="16114" y="2221.49" />
+              <mxPoint x="16114" y="2310" />
+              <mxPoint x="16032.51" y="2310" />
+            </Array>
+            <mxPoint x="16100" y="2250" as="sourcePoint" />
+            <mxPoint x="16020" y="2310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VB_GUb-S_NqHeq2EKdse-24" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#648BBE);strokeWidth=2.2;" target="bag_ticket2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="16160" y="2310" />
+              <mxPoint x="16302.5" y="2310" />
+            </Array>
+            <mxPoint x="16160" y="2220" as="sourcePoint" />
+            <mxPoint x="16300" y="2190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VB_GUb-S_NqHeq2EKdse-26" edge="1" parent="1" source="bulk_close_weigh" style="endArrow=classic;html=1;rounded=0;strokeWidth=2.2;strokeColor=light-dark(#000000,#6C8B43);entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.996;exitY=0.536;exitDx=0;exitDy=0;exitPerimeter=0;" target="bulk_calc" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="13304" y="2349.38" as="sourcePoint" />
+            <mxPoint x="13340" y="2350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VB_GUb-S_NqHeq2EKdse-25" edge="1" parent="1" source="bulk_select" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2.2;strokeColor=light-dark(#000000,#6C8B43);exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="bulk_close_weigh" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="13050" y="2349.76" as="sourcePoint" />
+            <mxPoint x="13090" y="2350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VB_GUb-S_NqHeq2EKdse-28" edge="1" parent="1" source="bulk_register" style="endArrow=classic;html=1;rounded=0;strokeWidth=2.2;strokeColor=light-dark(#000000,#6C8B43);entryX=0.013;entryY=0.583;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryPerimeter=0;" target="bulk_save" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="13820" y="2349.8" as="sourcePoint" />
+            <mxPoint x="13861" y="2349.8" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VB_GUb-S_NqHeq2EKdse-29" edge="1" parent="1" source="bulk_save" style="endArrow=classic;html=1;rounded=0;strokeWidth=2.2;strokeColor=light-dark(#000000,#6C8B43);entryX=0.006;entryY=0.466;entryDx=0;entryDy=0;exitX=1.002;exitY=0.571;exitDx=0;exitDy=0;entryPerimeter=0;exitPerimeter=0;" target="bulk_ticket" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="14020" y="2349.83" as="sourcePoint" />
+            <mxPoint x="14057" y="2349.83" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JNPHumPZwqIiNwgUwN5t-1" edge="1" parent="1" source="rd" style="endArrow=classic;html=1;rounded=0;strokeColor=light-dark(#000000,#836C0C);dashed=1;dashPattern=8 8;exitX=0.547;exitY=0.833;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.499;entryY=0.025;entryDx=0;entryDy=0;entryPerimeter=0;" target="rd_note" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1154.8" y="767.1999999999999" as="sourcePoint" />
+            <mxPoint x="1155.1999999999998" y="803" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JNPHumPZwqIiNwgUwN5t-3" edge="1" parent="1" source="nf" style="endArrow=classic;html=1;rounded=0;strokeColor=light-dark(#000000,#836C0C);dashed=1;dashPattern=8 8;exitX=0.497;exitY=0.851;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.503;entryY=0.025;entryDx=0;entryDy=0;entryPerimeter=0;" target="nf_note" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1154.8" y="1000" as="sourcePoint" />
+            <mxPoint x="1154.8" y="1039" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JNPHumPZwqIiNwgUwN5t-4" edge="1" parent="1" source="confirm_pack" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=light-dark(#000000,#959595);strokeWidth=2;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="2430" y="1320" as="sourcePoint" />
+            <mxPoint x="2480" y="1320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dual_search_plate_again" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Pesquisar novamente a placa do veículo" vertex="1">
+          <mxGeometry height="66" width="220" x="18110" y="2488" as="geometry" />
+        </mxCell>
+        <mxCell id="dual_check_bulk_data" parent="1" style="fontFamily=Arial;fontSize=13;fontColor=#1F2937;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;spacing=8;" value="Conferir os dados da etapa GRANEL" vertex="1">
+          <mxGeometry height="66" width="210" x="18725" y="2488" as="geometry" />
+        </mxCell>
+        <mxCell id="v6d_update_check" edge="1" parent="1" source="dual_update_nf" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#A15C9D;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="dual_check_bulk_data" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="18700" y="2521" />
+              <mxPoint x="18710" y="2521" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v6d_check_open" edge="1" parent="1" source="dual_check_bulk_data" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2.2;strokeColor=#A15C9D;fontSize=12;fontColor=#333333;labelBackgroundColor=#FFFFFF;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=1;" target="dual_open_bulk" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="18950" y="2521" />
+              <mxPoint x="18960" y="2521" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

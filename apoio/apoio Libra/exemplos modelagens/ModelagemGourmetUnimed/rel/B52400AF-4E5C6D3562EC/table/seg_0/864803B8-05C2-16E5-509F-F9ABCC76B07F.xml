@@ -1,0 +1,212 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="864803B8-05C2-16E5-509F-F9ABCC76B07F" name="XCXP_AR_PLANO_GOURMET_INT">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-07 16:07:07 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<ordsAlias>a1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PLANO_GOURMET" id="312B9A15-0B5F-7FFC-E60C-A21C0AE284CB">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-07 16:07:47 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_BENEFICIARIO_TITULAR" id="4EBD5906-0E8E-4D5A-09A7-05DCB719CD38">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-07 16:10:35 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 CHAR</dataTypeSize>
+<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_CPF" id="69EC18C7-A133-6867-5B18-1CE3E00A35EF">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-07 16:12:11 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>14 CHAR</dataTypeSize>
+<ownDataTypeParameters>14 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CD_MATRICULA" id="5A0D59F2-4A2F-AE95-BA56-C659C587C795">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-07 16:12:11 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_VENCIMENTO" id="BACAA154-6F4D-CBCC-C6A7-EF13FB87BDC4">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-07 16:12:11 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_COMPETENCIA" id="3E814C3B-2E9D-3B83-4B47-32ECE0104406">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-07 16:12:39 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VL_TOTAL" id="3D8A77BF-A092-C436-A3EE-7DE26B2B04DC">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-07 16:13:19 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,15,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CD_IDENTIFICADOR" id="5AAF7720-BCE8-77EC-DBEC-ECF5E85E3602">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-07 16:13:41 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IN_AR" id="179CF5F1-DFF9-3160-AF4B-BD10EA38ABAD">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-07 16:14:27 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IN_BOLETO" id="BDA706F2-4600-4BCD-C258-C8EF566DE928">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-07 16:14:27 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IN_PAGAMENTO" id="13771831-EF89-C02E-B5CB-7A29EB99E8E6">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-07 16:14:59 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CD_ORGANIZACAO_EMPRESA" id="9D6BE640-1BF0-2432-8535-EA98B853C84F">
+<createdBy>marcosvieira</createdBy>
+<createdTime>2022-04-08 14:16:03 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>240 CHAR</dataTypeSize>
+<ownDataTypeParameters>240 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_CRIACAO" id="30CF217A-B4A3-B689-42B4-31AC5F97ADC6">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-08 10:31:13 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_USUARIO_CRIACAO" id="CED37ABF-7F6A-E243-D644-9F1C49897C2A">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-08 10:31:13 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_ALTERACAO" id="F9AD8B72-CCB2-D3A3-81CA-8F36752AAE26">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-08 10:31:13 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_USUARIO_ALTERACAO" id="CB648809-D2A2-8213-0A89-25C503E6A796">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-08 10:31:13 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="885C08CF-B181-71AF-5F7E-CF1E91D1AD81" name="XCXP_AR_PLANO_GOURMET_INT_PK">
+<createdBy>caiosouza</createdBy>
+<createdTime>2022-04-07 16:09:31 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="312B9A15-0B5F-7FFC-E60C-A21C0AE284CB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C4809BDF-8065-F0D4-477A-21E4D9A8D5A3" name="XCXP_AR_PLANO_GOURMET_INT_UK1">
+<createdBy>marcosvieira</createdBy>
+<createdTime>2022-04-08 14:11:58 UTC</createdTime>
+<ownerDesignName>ModelagemGourmetUnimed</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5AAF7720-BCE8-77EC-DBEC-ECF5E85E3602"/>
+<colUsage columnID="9D6BE640-1BF0-2432-8535-EA98B853C84F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

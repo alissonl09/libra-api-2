@@ -1,0 +1,187 @@
+-- Modelo físico proposto - Oracle 19c / Oracle EBS R12
+-- Owner: XXBALANCA
+-- IMPORTANTE: tamanhos/tipos marcados na documentação como decisão técnica devem ser homologados contra o patch corporativo e dados reais.
+
+CREATE SEQUENCE XXBALANCA.XCXP_BAL_ACESSO_INT_S START WITH 1 INCREMENT BY 1 NOCYCLE;
+CREATE SEQUENCE XXBALANCA.XCXP_BAL_ACESSO_LINHA_S START WITH 1 INCREMENT BY 1 NOCYCLE;
+
+CREATE TABLE XXBALANCA.XCXP_BAL_ACESSO_INT
+(
+  ID_ACESSO                   NUMBER(15)         NOT NULL,
+  CD_UNIDADE_BALANCA          NUMBER(10)         NOT NULL,
+  CD_PLACA_VEICULO            VARCHAR2(10)       NOT NULL,
+  TP_DOCUMENTO                VARCHAR2(10)       NOT NULL,
+  TP_OPERACAO                 VARCHAR2(10)      ,
+  DS_NOTA                     VARCHAR2(2000)     NOT NULL,
+  DS_EMISSOR                  VARCHAR2(240)      NOT NULL,
+  NM_MOTORISTA                VARCHAR2(240)     ,
+  NM_TRANSPORTADOR            VARCHAR2(240)     ,
+  QT_TOTAL                    NUMBER(15,3)       NOT NULL,
+  DS_ACONDICIONAMENTO         VARCHAR2(50)      ,
+  DS_DESTINO                  VARCHAR2(500)      NOT NULL,
+  NR_SEQUENCIA                NUMBER(15)        ,
+  NR_TICKET_ORIGEM            NUMBER(15)        ,
+  CD_UNIDADE_ORIGEM           NUMBER(10)        ,
+  PS_LIQUIDO_ORIGEM           NUMBER(15,3)      ,
+  CD_SITUACAO_INTEGRACAO      VARCHAR2(30)       DEFAULT 'PENDENTE' NOT NULL,
+  QT_TENTATIVA                NUMBER(5)          DEFAULT 0 NOT NULL,
+  DT_ULTIMA_TENTATIVA         DATE              ,
+  DT_PROXIMA_TENTATIVA        DATE              ,
+  DT_INICIO_PROCESSAMENTO     DATE              ,
+  DT_CONCLUSAO_INTEGRACAO     DATE              ,
+  CD_ULTIMO_ERRO              VARCHAR2(100)     ,
+  DS_ULTIMO_ERRO              VARCHAR2(4000)    ,
+  ID_ACESSO_SMART             VARCHAR2(100)     ,
+  DT_CRIACAO                  DATE               NOT NULL,
+  NM_USUARIO_CRIACAO          VARCHAR2(100)      NOT NULL,
+  DT_ALTERACAO                DATE               NOT NULL,
+  NM_USUARIO_ALTERACAO        VARCHAR2(100)      NOT NULL
+);
+
+ALTER TABLE XXBALANCA.XCXP_BAL_ACESSO_INT ADD CONSTRAINT XCXP_BAL_ACESSO_INT_PK PRIMARY KEY (ID_ACESSO);
+
+CREATE INDEX XXBALANCA.XCXP_BAL_ACESSO_INT_I01 ON XXBALANCA.XCXP_BAL_ACESSO_INT (CD_SITUACAO_INTEGRACAO, DT_PROXIMA_TENTATIVA, ID_ACESSO);
+CREATE INDEX XXBALANCA.XCXP_BAL_ACESSO_INT_I02 ON XXBALANCA.XCXP_BAL_ACESSO_INT (ID_ACESSO_SMART);
+
+CREATE TABLE XXBALANCA.XCXP_BAL_ACESSO_LINHA
+(
+  ID_ACESSO_LINHA             NUMBER(15)         NOT NULL,
+  ID_ACESSO                   NUMBER(15)         NOT NULL,
+  TP_DOCUMENTO                VARCHAR2(10)       NOT NULL,
+  ID_DOCUMENTO_ORIGEM         NUMBER(15)         NOT NULL,
+  NR_DOCUMENTO_ORIGEM         VARCHAR2(100)      NOT NULL,
+  NR_DOCUMENTO_REFERENCIA     VARCHAR2(100)     ,
+  DT_CRIACAO                  DATE               NOT NULL,
+  NM_USUARIO_CRIACAO          VARCHAR2(100)      NOT NULL,
+  DT_ALTERACAO                DATE               NOT NULL,
+  NM_USUARIO_ALTERACAO        VARCHAR2(100)      NOT NULL
+);
+
+ALTER TABLE XXBALANCA.XCXP_BAL_ACESSO_LINHA ADD CONSTRAINT XCXP_BAL_ACESSO_LINHA_PK PRIMARY KEY (ID_ACESSO_LINHA);
+ALTER TABLE XXBALANCA.XCXP_BAL_ACESSO_LINHA ADD CONSTRAINT XCXP_BAL_ACESSO_LINHA_FK1 FOREIGN KEY (ID_ACESSO) REFERENCES XXBALANCA.XCXP_BAL_ACESSO_INT (ID_ACESSO);
+CREATE INDEX XXBALANCA.XCXP_BAL_ACESSO_LINHA_I01 ON XXBALANCA.XCXP_BAL_ACESSO_LINHA (ID_ACESSO);
+CREATE INDEX XXBALANCA.XCXP_BAL_ACESSO_LINHA_I02 ON XXBALANCA.XCXP_BAL_ACESSO_LINHA (TP_DOCUMENTO, ID_DOCUMENTO_ORIGEM);
+
+COMMENT ON TABLE XXBALANCA.XCXP_BAL_ACESSO_INT IS
+'Tabela de integração dos acessos de pesagem enviados ao SMART 1';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.ID_ACESSO IS
+'Identificador técnico da visita/pesagem no Oracle.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.CD_UNIDADE_BALANCA IS
+'Código da unidade onde a pesagem será realizada.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.CD_PLACA_VEICULO IS
+'Placa do cavalo/veículo utilizada para localizar o acesso.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.TP_DOCUMENTO IS
+'Processo de origem atualmente contemplado: EPA, XFER ou OM.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.TP_OPERACAO IS
+'Momento da operação; usado em XFER para SAIDA ou ENTRADA.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.DS_NOTA IS
+'Descrição textual consolidada dos documentos apresentados à balança; não é chave.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.DS_EMISSOR IS
+'Descrição/nome consolidado do emissor.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.NM_MOTORISTA IS
+'Nome do motorista, quando disponível.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.NM_TRANSPORTADOR IS
+'Nome/descrição do transportador, quando disponível.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.QT_TOTAL IS
+'Quantidade ou peso previsto consolidado para a pesagem.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.DS_ACONDICIONAMENTO IS
+'Acondicionamento consolidado, por exemplo BAG, GRANEL ou BAG / GRANEL; pode ser nulo para OM.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.DS_DESTINO IS
+'Descrição genérica de destino: organização de recebimento, destinatário ou cliente conforme o processo.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.NR_SEQUENCIA IS
+'Reservado para integrações futuras; inicialmente gravado como NULL.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.NR_TICKET_ORIGEM IS
+'Ticket válido da pesagem de saída; obrigatório por regra somente em XFER ENTRADA.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.CD_UNIDADE_ORIGEM IS
+'Código da unidade de origem; obrigatório por regra em XFER ENTRADA.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.PS_LIQUIDO_ORIGEM IS
+'Peso líquido apurado na origem; obrigatório por regra em XFER ENTRADA.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.CD_SITUACAO_INTEGRACAO IS
+'Estado multivalorado do ciclo Oracle → Libra → SMART 1.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.QT_TENTATIVA IS
+'Quantidade de tentativas de integração realizadas.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.DT_ULTIMA_TENTATIVA IS
+'Data/hora da tentativa de integração mais recente.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.DT_PROXIMA_TENTATIVA IS
+'Data/hora a partir da qual um erro reprocessável pode ser tentado novamente.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.DT_INICIO_PROCESSAMENTO IS
+'Momento em que o registro foi reservado/marcado como PROCESSANDO; permite detectar processamento abandonado.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.DT_CONCLUSAO_INTEGRACAO IS
+'Data/hora em que a integração foi concluída com sucesso.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.CD_ULTIMO_ERRO IS
+'Código técnico do último erro de integração, quando aplicável.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.DS_ULTIMO_ERRO IS
+'Mensagem/descrição do último erro de integração.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.ID_ACESSO_SMART IS
+'Identificador externo retornado pelo SMART 1, caso o contrato o forneça.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.DT_CRIACAO IS
+'Data de criação do registro.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.NM_USUARIO_CRIACAO IS
+'Usuário responsável pela criação do registro.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.DT_ALTERACAO IS
+'Data da última alteração do registro.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_INT.NM_USUARIO_ALTERACAO IS
+'Usuário responsável pela última alteração do registro.';
+
+COMMENT ON TABLE XXBALANCA.XCXP_BAL_ACESSO_LINHA IS
+'Tabela filha que identifica os documentos Oracle pertencentes ao acesso de pesagem';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_LINHA.ID_ACESSO_LINHA IS
+'Identificador técnico da linha/documento do acesso.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_LINHA.ID_ACESSO IS
+'Acesso ao qual o documento pertence; participação obrigatória.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_LINHA.TP_DOCUMENTO IS
+'Tipo do documento ERP de origem: EPA, XFER ou OM.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_LINHA.ID_DOCUMENTO_ORIGEM IS
+'ID técnico interno do ERP (ID_ENTRADA, ID_TRANSFERENCIA ou DELIVERY_ID). Não integra o contrato SMART.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_LINHA.NR_DOCUMENTO_ORIGEM IS
+'Número funcional: NR_ENTRADA, NR_PLANEJAMENTO ou número da DI.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_LINHA.NR_DOCUMENTO_REFERENCIA IS
+'Referência complementar: NF/RD, OC/viagem ou PV, conforme processo.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_LINHA.DT_CRIACAO IS
+'Data de criação do registro.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_LINHA.NM_USUARIO_CRIACAO IS
+'Usuário responsável pela criação do registro.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_LINHA.DT_ALTERACAO IS
+'Data da última alteração do registro.';
+
+COMMENT ON COLUMN XXBALANCA.XCXP_BAL_ACESSO_LINHA.NM_USUARIO_ALTERACAO IS
+'Usuário responsável pela última alteração do registro.';
+

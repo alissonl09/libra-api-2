@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ACESSO_POSSUI_LINHAS" directorySegmentName="seg_0" id="1EEA40EB-B5C9-5E45-AAE7-821CCD6BD293">
+<createdBy>ChatGPT/OpenAI</createdBy><createdTime>2026-09-20 23:16:00 UTC</createdTime><ownerDesignName>XCXP_BAL_BALANCA_SMART1</ownerDesignName>
+<engineerTo><item key="9418B248-2741-50EB-B914-8045D58F6A78" value="true"/></engineerTo>
+<sourcePk>E592AD8D-17A4-5CD5-9158-5284D8DC6A71</sourcePk><identifying>false</identifying><optionalSource>false</optionalSource><optionalTarget>false</optionalTarget><sourceCardinality>1</sourceCardinality><sourceEntity>B6F27EBC-9190-5F45-AB84-C1373453B042</sourceEntity><targetCardinalityString>*</targetCardinalityString><targetEntity>4105DD48-0D54-539C-9DFD-EC55E96B1012</targetEntity><transferable>true</transferable><deleteRule>NO ACTION</deleteRule>
+</Relation>

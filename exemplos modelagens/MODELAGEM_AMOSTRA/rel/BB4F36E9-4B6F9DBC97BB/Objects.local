@@ -1,6 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<oracle.dbtools.crest.model.design.relational.RelationalDesign>
-   <object objectType="Table" objectID="3AC5A4F2-67B7-174D-F1EF-4B4D51322E42" name="XCXP_FLW_AMOSTRA_BLEND_iNT" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="BB4F36E9-4C5B-03D0-12EA-4B6F9DBC97BB" propertySourceId="" propertyTargetId=""/>
-   <object objectType="Table" objectID="5AB5CA21-08D6-D279-FA51-60EBBB097C9D" name="XCXP_FLW_AMOSTRA_INT" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="BB4F36E9-4C5B-03D0-12EA-4B6F9DBC97BB" propertySourceId="" propertyTargetId=""/>
-   <object objectType="FKIndexAssociation" objectID="C2A8EFA8-6414-CE61-1975-F58BE26D7BD3" name="XCXP_FLW_AMOSTRA_BLEND_iNT_XCXP_FLW_AMOSTRA_INT_FK" containerID="3AC5A4F2-67B7-174D-F1EF-4B4D51322E42" refContainerID="5AB5CA21-08D6-D279-FA51-60EBBB097C9D" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" propertyParentId="BB4F36E9-4C5B-03D0-12EA-4B6F9DBC97BB" propertySourceId="5AB5CA21-08D6-D279-FA51-60EBBB097C9D" propertyTargetId="3AC5A4F2-67B7-174D-F1EF-4B4D51322E42"/>
-</oracle.dbtools.crest.model.design.relational.RelationalDesign>

@@ -1,0 +1,78 @@
+WHENEVER SQLERROR CONTINUE;
+CONNECT &1/&2
+SET DEF OFF
+SET VERIFY OFF
+SET SQLBLANKLINES ON
+SPOOL XCXP_GV_MOVIMENTACAO.tab.log
+
+PROMPT OBJETO:  XCXP_GV_MOVIMENTACAO.tab
+
+-- $Version: XCXP_GV_MOVIMENTACAO.tab 120.1 17/07/2025 11:00:00 tiagochagas ship $
+-- +=================================================================+
+-- |                  Copyright (c) 2025 COOXUPE                     |
+-- |                     All rights reserved.                        |
+-- +=================================================================+
+-- |   ARQUIVO                                                       |
+-- |     XCXP_GV_MOVIMENTACAO                                        |
+-- |                                                                 |
+-- |   DESCRICAO                                                     |
+-- |     PRJ 2837 - Gestão de veículos                               |
+-- |                                                                 |
+-- |   MODULO                                                        |
+-- |     GV                                                          |
+-- |                                                                 |
+-- |   CONTROLE DE VERSAO                                            |
+-- |     Versão: $Revision: 1.0 $                                    |
+-- |     Data  : $Date: 2025/07/17 11:00:00 $                        |
+-- |                                                                 |
+-- |   HISTORICO:                                                    |
+-- |               V1 - Criação objeto - tiagochagas                 |
+-- |                                                                 |
+-- +=================================================================+
+--
+
+CREATE TABLE XXMCC.XCXP_GV_MOVIMENTACAO
+(
+  id_movimentacao          NUMBER(15) not null,
+  id_acondicionamento      NUMBER(15),
+  id_operacao              NUMBER(15),
+  cd_placa_veiculo         VARCHAR2(30) not null,
+  dt_movimentacao          DATE not null,
+  nr_tag                   VARCHAR2(50),
+  in_status_movimentacao   VARCHAR2(50) not null,
+  in_embarque_externo      VARCHAR2(1),
+  in_frota_dedicada        VARCHAR2(1),
+  in_pernoite              VARCHAR2(1),
+  in_reprova               VARCHAR2(1),
+  ds_reprova               VARCHAR2(500),
+  dt_agendamento           DATE,
+  tp_documento             VARCHAR2(50),
+  ds_documento             VARCHAR2(50),
+  nm_motorista             VARCHAR2(100),
+  nm_contato_colaborador   VARCHAR2(100),
+  nm_perfil_acesso_dimep   VARCHAR2(50),
+  nm_estrutura             VARCHAR2(50),
+  dt_criacao               DATE not null,
+  ds_finalizacao_manual    VARCHAR2(100),
+  id_ponto_dest_primario   NUMBER(15),
+  id_ponto_dest_secundario NUMBER(15),
+  in_status                VARCHAR2(1),
+  nm_usuario_criacao       VARCHAR2(100) not null,
+  dt_alteracao             DATE not null,
+  nm_usuario_alteracao     VARCHAR2(100) not null
+);
+
+ALTER TABLE XXMCC.XCXP_GV_MOVIMENTACAO ADD CONSTRAINT XCXP_GV_MOVIMENTACAO_PK PRIMARY KEY ( ID_MOVIMENTACAO );
+
+ALTER TABLE XXMCC.XCXP_GV_MOVIMENTACAO ADD CONSTRAINT XCXP_GV_MOVIMENTACAO_UK1 UNIQUE ( CD_PLACA_VEICULO, DT_MOVIMENTACAO );
+
+PROMPT ADZ:  AD_ZD_TABLE.UPGRADE
+
+BEGIN
+  AD_ZD_TABLE.UPGRADE('XXMCC', 'XCXP_GV_MOVIMENTACAO');
+END;
+
+/
+SHOW ERRORS
+SPOOL OFF
+EXIT;

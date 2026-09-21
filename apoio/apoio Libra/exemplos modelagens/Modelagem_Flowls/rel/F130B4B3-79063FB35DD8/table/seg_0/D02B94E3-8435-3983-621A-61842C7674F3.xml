@@ -1,0 +1,367 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D02B94E3-8435-3983-621A-61842C7674F3" name="XXMCC.XCXP_FLW_PEDIDO_INT">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 18:27:26 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PEDIDO_INT" id="1D8DE855-9789-0B1E-6519-E524DF307FD0">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 18:51:32 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CD_EXPORTADOR" id="2A7B5229-2A42-5C14-B8C5-030528131783">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 18:53:52 UTC</createdTime>
+<commentInRDBMS><![CDATA[order.handlers.actor_id ]]></commentInRDBMS>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CD_REFERENCIA" id="DE3D010C-1E6E-8E2F-5DCB-E9058060D643">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 18:55:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[order.reference_code]]></commentInRDBMS>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CD_REFERENCIA_EXTERNA" id="5AEA491B-DB87-8F5F-347C-77B7395052BA">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 18:56:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[order.external_reference_code]]></commentInRDBMS>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_LINHA" id="ADFB1A98-4A87-97CF-5F40-7B9706A4B1F2">
+<createdBy>pedroigor</createdBy>
+<createdTime>2025-12-04 13:17:20 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DS_OBSERVACOES" id="19BF29BC-989B-548F-B635-0ABFAB0AF0A4">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 18:58:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[order.observations]]></commentInRDBMS>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 BYTE</dataTypeSize>
+<ownDataTypeParameters>1000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DS_COND_PGTO" id="C5D01664-95FD-A806-9B2B-BA9BE3ED11BA">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 19:11:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[order.extra_fields.order_data.payment_terms]]></commentInRDBMS>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 BYTE</dataTypeSize>
+<ownDataTypeParameters>500 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IN_SUJEITO_APROVACAO" id="1DF507B5-969E-0581-63BA-ECAF6DA58AC8">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 19:26:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[order.extra_fields.order_data.sample_required]]></commentInRDBMS>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 BYTE</dataTypeSize>
+<ownDataTypeParameters>6 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IN_EXIGE_LIBERACAO_AMOSTRA" id="03B76F14-FD12-8C83-F2FF-7CE293B79B93">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-12-30 13:19:08 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 BYTE</dataTypeSize>
+<ownDataTypeParameters>6 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_RESPONSAVEL_APROVACAO" id="110D4B4A-A307-8964-E955-7F2782EF0AFC">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 19:26:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[order.extra_fields.order_data.approval_responsible]]></commentInRDBMS>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 BYTE</dataTypeSize>
+<ownDataTypeParameters>150 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_REPRESENTANTE_CLIENTE" id="97956BB0-AD06-B4FA-57C2-E0CC51B6A3A7">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 19:28:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[order.extra_fields.order_data.client_representative]]></commentInRDBMS>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 BYTE</dataTypeSize>
+<ownDataTypeParameters>150 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DS_SITUACAO" id="05577DE7-9F33-4881-36B5-8FB83A2EB73B">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 20:03:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[order.extra_fields.order_data.fixation_status]]></commentInRDBMS>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 BYTE</dataTypeSize>
+<ownDataTypeParameters>500 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DS_OPCAO_FIXACAO" id="6AF2EC82-2080-6E84-BBD9-4FCFD071B5C2">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 20:05:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[order.extra_fields.order_data.fixation_option]]></commentInRDBMS>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DS_MES_FIXACAO" id="15D9B591-C253-F9F2-D60C-088BE41075C8">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 20:06:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[order.extra_fields.order_data.fixation_month]]></commentInRDBMS>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IN_EUDR" id="DB2AD8FF-A35E-8213-7971-D3672EEC0175">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 20:07:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[order.extra_fields.order_data.eudr]]></commentInRDBMS>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 BYTE</dataTypeSize>
+<ownDataTypeParameters>6 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CD_INCONTERM" id="ACCF235A-F2BA-B75C-919F-606148E7B779">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 20:08:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[order.extra_fields.order_data.incoterm]]></commentInRDBMS>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_VENDEDOR" id="9584334D-53F1-D09F-5E51-1098740167F0">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 20:09:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[order.extra_fields.order_data.salesperson]]></commentInRDBMS>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_LOCAL_CARREGAMENTO" id="6536D1A5-79FB-3C59-8C91-ED36BC558CF7">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 20:09:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[order.extra_fields.order_data.loading_location]]></commentInRDBMS>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 BYTE</dataTypeSize>
+<ownDataTypeParameters>250 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CD_CLIENTE" id="CE8E3537-C114-401B-7CB6-7914D82BA47D">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-24 17:30:35 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_AGENTE" id="0C68F5DD-FACD-F7D3-2E32-3FE22D7D016E">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-24 17:33:00 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 BYTE</dataTypeSize>
+<ownDataTypeParameters>250 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_PEDIDO" id="D7E9618E-1ED9-083A-07E8-3BDACE2A3C02">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-10-14 12:41:50 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IN_INTEGRADO" id="8B3698C3-F839-FC21-59B4-AB083DC01722">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-24 12:06:23 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_INTEGRACAO" id="458D9027-DF9D-EECB-FBC5-C430452A10E0">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-24 12:06:56 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DS_RETORNO_INTEGRACAO" id="08ABB58D-754A-6BE6-FCC6-45E23492FFF4">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-24 12:07:35 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_USUARIO_CRIACAO" id="4A0F4CA2-8B01-7260-2218-603F8A32E064">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-24 12:02:05 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_CRIACAO" id="44A78E9E-9683-461B-B9A2-B9E00AA395D3">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-24 12:05:44 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NM_USUARIO_ALTERACAO" id="766737CE-A82A-FC27-01F0-3D0A9B2BF8AF">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-24 12:05:44 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_ALTERACAO" id="B85F9621-DB8B-EFAA-2534-6B650C88D43E">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-24 12:06:02 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F7477555-BD15-B365-36CB-DEFCB6F45E5D" name="XCXP_FLW_PEDIDO_INT_PK">
+<createdBy>joaofarias</createdBy>
+<createdTime>2025-09-23 18:51:32 UTC</createdTime>
+<ownerDesignName>Modelagem_Flowls</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D8DE855-9789-0B1E-6519-E524DF307FD0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

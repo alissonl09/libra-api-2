@@ -1,7 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="F094884F-1175-23C7-40C3-CA940CBDAAAC" mainViewID="460B12B1-ED5E-ECFE-6076-F372934B60DF">
-<createdBy>joaofarias</createdBy>
-<createdTime>2026-05-22 13:56:03 UTC</createdTime>
-<ownerDesignName>ModelagemDocFlowls</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
-</LogicalDesign>

@@ -1,0 +1,6 @@
+VALIDAÇÃO TÉCNICA DO PACOTE
+
+Arquivos XML analisados: 16
+Resultado: XML bem-formado (ElementTree).
+
+Observação: o design foi construído no formato persistido do Oracle SQL Developer Data Modeler e deve ser aberto pelo .dmd junto com a pasta homônima. A compatibilidade final de renderização depende da versão instalada do Data Modeler.

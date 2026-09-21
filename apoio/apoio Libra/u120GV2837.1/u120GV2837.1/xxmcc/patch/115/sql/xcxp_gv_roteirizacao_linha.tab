@@ -1,0 +1,62 @@
+WHENEVER SQLERROR CONTINUE;
+CONNECT &1/&2
+SET DEF OFF
+SET VERIFY OFF
+SET SQLBLANKLINES ON
+SPOOL XCXP_GV_ROTEIRIZACAO_LINHA.tab.log
+
+PROMPT OBJETO:  XCXP_GV_ROTEIRIZACAO_LINHA.tab
+
+-- $Version: XCXP_GV_ROTEIRIZACAO_LINHA.tab 120.1 17/07/2025 11:00:00 tiagochagas ship $
+-- +=================================================================+
+-- |                  Copyright (c) 2025 COOXUPE                     |
+-- |                     All rights reserved.                        |
+-- +=================================================================+
+-- |   ARQUIVO                                                       |
+-- |     XCXP_GV_ROTEIRIZACAO_LINHA                                  |
+-- |                                                                 |
+-- |   DESCRICAO                                                     |
+-- |     PRJ 2837 - Gestão de veículos                               |
+-- |                                                                 |
+-- |   MODULO                                                        |
+-- |     GV                                                          |
+-- |                                                                 |
+-- |   CONTROLE DE VERSAO                                            |
+-- |     Versão: $Revision: 1.0 $                                    |
+-- |     Data  : $Date: 2025/07/17 11:00:00 $                        |
+-- |                                                                 |
+-- |   HISTORICO:                                                    |
+-- |               V1 - Criação objeto - tiagochagas                 |
+-- |                                                                 |
+-- +=================================================================+
+--
+
+CREATE TABLE XXMCC.XCXP_GV_ROTEIRIZACAO_LINHA (
+    ID_ROTEIRIZACAO_LINHA   NUMBER(15) NOT NULL,
+    ID_ROTEIRIZACAO         NUMBER(15) NOT NULL,
+    ID_PONTO_CONTROLE       NUMBER(15) NOT NULL,
+    IN_STATUS               VARCHAR2(1) NOT NULL,
+    DT_CRIACAO              DATE NOT NULL,
+    NM_USUARIO_CRIACAO      VARCHAR2(100) NOT NULL,
+    DT_ALTERACAO            DATE NOT NULL,
+    NM_USUARIO_ALTERACAO    VARCHAR2(100) NOT NULL
+);
+
+ALTER TABLE XXMCC.XCXP_GV_ROTEIRIZACAO_LINHA ADD CONSTRAINT XCXP_GV_ROTEIRIZACAO_LINHA_PK PRIMARY KEY ( ID_ROTEIRIZACAO_LINHA );
+
+ALTER TABLE XXMCC.XCXP_GV_ROTEIRIZACAO_LINHA ADD CONSTRAINT XCXP_GV_ROTEIRIZACAO_LINHA_UK1 UNIQUE ( ID_ROTEIRIZACAO, ID_PONTO_CONTROLE );
+
+ALTER TABLE XXMCC.XCXP_GV_ROTEIRIZACAO_LINHA ADD CONSTRAINT XCXP_GV_ROTLINHA_PONTOCONTR_FK FOREIGN KEY ( ID_PONTO_CONTROLE ) REFERENCES XXMCC.XCXP_GV_PONTO_CONTROLE ( ID_PONTO_CONTROLE );
+
+ALTER TABLE XXMCC.XCXP_GV_ROTEIRIZACAO_LINHA ADD CONSTRAINT XCXP_GV_ROTLINHA_ROT_FK FOREIGN KEY ( ID_ROTEIRIZACAO ) REFERENCES XXMCC.XCXP_GV_ROTEIRIZACAO ( ID_ROTEIRIZACAO );
+
+PROMPT ADZ:  AD_ZD_TABLE.UPGRADE
+
+BEGIN
+  AD_ZD_TABLE.UPGRADE('XXMCC', 'XCXP_GV_ROTEIRIZACAO_LINHA');
+END;
+
+/
+SHOW ERRORS
+SPOOL OFF
+EXIT;
